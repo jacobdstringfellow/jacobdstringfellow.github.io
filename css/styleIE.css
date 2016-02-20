@@ -1,0 +1,57 @@
+/*COLORS
+	Dark Gray:     #393939;
+	Dark Orange:   #FF5A09;
+	Flat Orange:   #F3843E;
+	Yellow Orange: #FF9900;
+	Medium Gray:   #6E6E6E;
+    Red:           #fb2d2d;
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700);
+
+#loader
+{
+	display: none;
+}
+
+#section0 h1, #section0 p
+{
+	//position: static;
+}
+
+#section0 p
+{
+	font-size: 1.7em;
+	margin-bottom: 100px;
+}
+
+#section2 #topSkills #heading
+{
+	top: 45%;
+	padding-top: 0px;
+}
+
+#leftContainer, #rightContainer
+{
+	position: relative;
+	vertical-align: middle;
+	height: 100%;
+	padding-top: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
