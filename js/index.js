@@ -4,43 +4,80 @@ var $header_top = $('.header-top');
 var $nav = $('nav');
 var $close = $('.close');
 var $headerClose = $('.header-top.open-menu');
-var $hamburger = $('#hamburger-icon');
 
-//src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"
+/*=======================================================================
+		         STYLES FOR THE WEBSITE LOADER ANIMATION
+=======================================================================*/
+
+$(window).load(function() {
+		
+        $(this).delay(2000).queue(function(){
+        $('body').addClass('loaded');
+        $(this).dequeue();});
+});
+
+/*=======================================================================
+		      END OF STYLES FOR WEBSITE LOADER ANIMATION
+=======================================================================*/
+
+/*=======================================================================
+		   STYLES FOR THE PARRALAX BACKGROUND OF THE FIRST PAGE
+=======================================================================*/
+function isIE () {
+  var myNav = navigator.userAgent.toLowerCase();
+  return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+}
+
+if (isIE () && isIE () <= 9) {
+ // is IE version less than 9
+   $('main').css('display', 'none');
+}
+
+/*=======================================================================
+		        END OF STYLES FOR THE PARRALAX BACKGROUND
+=======================================================================*/
+
+/*=======================================================================
+		        BEGINNING OF NAV STYLING - HAMBURGER MENU
+=======================================================================*/
+
+$(".menu-toggle").on('click', function() {
+	$(this).toggleClass("on");
+
+	if( $("nav").css('display') == 'none') {
+		$('nav').slideDown();
+	}
+	else
+	{
+		$('nav').fadeOut();
+	}
+});
+
+
+$(".menu-toggle").on('mouseenter', function() {
+	$(this).addClass("on");
+    $('nav').fadeIn();
+});
+
+$("nav ul li a").on('click', function() {
+    $('nav').fadeOut();
+    $('.menu-toggle').removeClass("on");
+});
+
+/*=======================================================================
+		         END OF NAV STYLING - HAMBURGER MENU
+=======================================================================*/
 
 if (('ontouchstart' in window) && ((navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)))
 {
    
-     // toggle menu 
-    $hamburger.on('click', function() {
-      $hamburger.toggleClass('active');
-      $(this).parent().toggleClass('open-menu');
-      $(this).parent().toggleClass('headerOpen');
-    });
 }	 
 
 else
 {
 //behaviour and events for pointing device like mouse
 // toggle menu 
-    $hamburger.click(function() {
-     $hamburger.toggleClass('active');
-     //return false;
-    });
-    
-    $hamburger.on('mouseenter', function() {
-      $hamburger.addClass('active');
-      //return false;
-    });
-    $hamburger.on('click', function() {
-      $(this).parent().toggleClass('open-menu', 0, "swing");
-      $(this).parent().toggleClass('headerOpen', 0, "swing");
-    });
 
-    $hamburger.on('mouseenter', function() {
-      $(this).parent().addClass('open-menu', 0, "swing");
-      $(this).parent().addClass('headerOpen', 0, "swing");
-    });
 }
 
 $close.click(function() {
@@ -184,7 +221,7 @@ $('#fullpage').fullpage({
 						e.preventDefault();
 						$.fn.fullpage.moveTo(2);
 						$('#section1 h1').delay(500).animate({
-                            marginTop: '60px',
+                            marginTop: '80px',
                             opacity: 1
                         }, 500);
                         
@@ -207,21 +244,30 @@ $('#fullpage').fullpage({
 					$('.goTo4').click(function(e){
 						e.preventDefault();
 						$.fn.fullpage.moveTo(4);
-						$('#section3 .leftside h2').delay(800).animate({
+						$('#section3 .leftside h2').delay(600).animate({
                             marginTop: '-1px',
                         }, 500);
-						$('#section3 #info').delay(800).animate({
+						$('#section3 #info').delay(600).animate({
 								opacity: 1
 							}, 500);
 						
-						if ( $(window).width() < 850) {  
-							$('#section3 .rightside h2').delay(0).animate({
+						if ( $(window).width() > 850) { 
+                             $('#section3 .rightside h2').delay(600).animate({
+                            marginTop: '-1px',
+                            }, 500);
+                            $('#section3 .rightside').delay(600).animate({
+                               opacity: 1
+                            }, 500);
+                        }
+                        
+                        if ( $(window).width() < 850) { 
+                             $('#section3 .rightside h2').delay(1800).animate({
                                 marginTop: '-1px',
-                            }, 500);						
-							 $('#section3 .rightside').delay(0).animate({
-								opacity: 1
-							}, 500);
-						}
+                            }, 500);
+                            $('#section3 .rightside').delay(1500).animate({
+                               opacity: 1
+                            }, 500);
+                        }
 					});
 				},
                 onLeave: function(index, nextIndex, direction) {
@@ -231,7 +277,7 @@ $('#fullpage').fullpage({
                     if(index == 1 && direction == "down")
 					{
                         $('#section1 h1').delay(500).animate({
-                            marginTop: '60px',
+                            marginTop: '80px',
                             opacity: 1
                         }, 500);
                         
@@ -278,7 +324,7 @@ $('#fullpage').fullpage({
                     
 					if(index == 3 && direction =='up'){
 						$('#section1 h1').delay(500).animate({
-                            marginTop: '60px',
+                            marginTop: '80px',
                             opacity: 1
                         }, 500);
                         

@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 
 <!-- 
+	check out Bower, Modernizr, PrefixFree
 	http://speckyboy.com/2013/07/10/your-page-speed-down-cut-your-pages-loading-time-in-half-with-some-simple-jquery/
 	https://www.smashingmagazine.com/2009/04/15-essential-checks-before-launching-your-website/
 	http://www.my-debugbar.com/wiki/IETester/HomePage   IE TESTER
 	http://browsershots.org/
 	https://crossbrowsertesting.com/freetrial
 	https://gtmetrix.com/
+    nibbler
+    woorank
 	http://nibbler.silktide.com/en_US/reports/jacobdstringfellow.github.io
+	http://www.coconutstrategy.com/blog/2014/04/the-7-best-tools-for-testing-your-website
 	
-	Fix scrolling on mobile for contact me
+	IE10 - any mouse movement scrolls page up
+    SAFARI - Completely messed up
 	Add alts and titles for every image
+    Leverage browser caching
+    Defer parsing of javascript
+        https://varvy.com/pagespeed/defer-loading-javascript.html
+
+    SEO
+        http://blog.hubspot.com/blog/tabid/6307/bid/33164/6-SEO-Tools-to-Analyze-Your-Site-Like-Google-Does.aspx
+
+    DESIGN IDEAS
+    -zoom pics on scroll!
+    -scrollreveal js
+
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -20,8 +36,6 @@
 
 	<title>Jacob Stringfellow | Web Design and Development | Long Island, NY</title>
 
-	<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
-	
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="author" content="Jacob Daniel Stringfellow" />
 	<meta name="description" content="Portfolio website for Jacob D Stringfellow, Web Designer and Developer from Long Island, New York" />
@@ -33,26 +47,12 @@
 	<link rel="shortcut icon" href="img/meOutline.png" />
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/hamburger.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link rel="stylesheet" type="text/css" href="css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="css/hamburger.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/lightcase.css">
 	
-	<link rel="stylesheet" href="css/loader.css">
-	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-	<link rel="stylesheet" href="css/parralax.css">
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/lightcase.css">
-    <script type="text/javascript" src="js/lightcase.js"></script>
-    <script>
-        jQuery(document).ready(function($) {
-            $('a[data-rel^=lightcase]').lightcase();
-        });
-    </script>
-		
-    <!--[if IE]>
+	<!--[if lte IE 9]>
 	<link rel="stylesheet" type="text/css" href="css/styleIE.css" />
 	<![endif]-->
     
@@ -81,7 +81,6 @@
 		}
 
 		#section2 #html{
-			//bottom: -130%;
 			position:relative;
 		}
 		
@@ -140,7 +139,7 @@
 
 .feedback-input:focus{
 	background: rgba(41,50,65,0.7);
-	box-shadow: 0;
+	box-shadow: none;
 	color: #E0FBFC;
 	border: 2px solid #E0FBFC;
 	outline: none;
@@ -258,52 +257,20 @@ input:focus, textarea:focus {
 		</script>
 	<![endif]-->
 
-	<!--
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-	
-	<script src="js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lightcase.js"></script>
 	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+	<script>
+        jQuery(document).ready(function($) {
+            $('a[data-rel^=lightcase]').lightcase();    //Lightcase for work photos
+			$('#scene').parallax();                     //For parralax background on home page
+        });
+    </script>
 	
 </head>
 <body>
 <header>
 
-  <!--  
-  <div id="topNav" class="header-top clearfix">
-    <h1 class="l-left"><a><img id="logo" src="img/meInvert_Lite.png"/></a></h1>
-    <!--<a class="l-right toggle-menu" href="#">
-      <i></i>
-      <i></i>
-      <i></i>
-    </a>-->
-    <!--<a id="hamburger-icon" href="#" title="Menu">
-        <span class="line line-1"></span>
-        <span class="line line-2"></span>
-        <span class="line line-3"></span>
-    </a>-->
-    <!--
-  </div>
--->
-<!--
-  <nav class="hide close">
-    <ul role="navigation" id="menu">
-      <li style="background: url(img/planeView_dark.jpg) center;" data-menuanchor="1stPage">
-        <a class="menuItem goTo1" href="#1stPage" title="First Section"><h4>HELLO&nbsp;&nbsp;<i class="fa fa-hand-paper-o fa-spin"></i></h4>
-</a>
-      </li>
-      <li style="background: url(img/carDark.jpg) center;" data-menuanchor="2ndPage">
-        <a class="menuItem goTo2" href="#2ndPage" title="Second Section"><h4>WORK&nbsp;&nbsp;<i class="fa fa-desktop"></i></h4></a>
-      </li>
-      <li style="background: url(img/stairway_dark.jpg) center;" data-menuanchor="3rdPage">
-        <a id="moveTo" class="menuItem goTo3" href="#3rdPage" title="Second Section"><h4>SKILLS&nbsp;&nbsp;<i class="fa fa-keyboard-o"></i></h4></a>
-      </li>
-      <li style="background: url(img/planeView_dark.jpg) center;" data-menuanchor="4thPage">
-        <a class="menuItem goTo4" href="#4thPage" title="Fourth Section"><h4>CONTACT&nbsp;&nbsp;<i class="fa fa-file-text-o"></i></h4></a>
-      </li>
-    </ul>
-  </nav>-->
-    
 <div id="topNav" class="menu-section header-top">
   <h1 class="l-left"><a><img id="logo" src="img/meInvert_Lite.png"/></a></h1>
   <div class="menu-toggle">
@@ -313,17 +280,16 @@ input:focus, textarea:focus {
   </div>
   <nav>
 		<ul role="navigation">
-			<li style="background: url(img/planeView_dark.jpg) center;" data-menuanchor="1stPage">
-        <a class="menuItem goTo1" href="#1stPage" title="First Section"><h4>HELLO&nbsp;&nbsp;<i class="fa fa-hand-paper-o fa-spin"></i></h4>
-</a>
+	  <li data-menuanchor="1stPage">
+        <a class="menuItem goTo1" href="#1stPage" title="First Section"><h4>HELLO&nbsp;&nbsp;<i class="fa fa-hand-paper-o fa-spin"></i></h4></a>
       </li>
-      <li style="background: url(img/carDark.jpg) center;" data-menuanchor="2ndPage">
+      <li data-menuanchor="2ndPage">
         <a class="menuItem goTo2" href="#2ndPage" title="Second Section"><h4>WORK&nbsp;&nbsp;<i class="fa fa-desktop"></i></h4></a>
       </li>
-      <li style="background: url(img/stairway_dark.jpg) center;" data-menuanchor="3rdPage">
+      <li data-menuanchor="3rdPage">
         <a id="moveTo" class="menuItem goTo3" href="#3rdPage" title="Second Section"><h4>SKILLS&nbsp;&nbsp;<i class="fa fa-keyboard-o"></i></h4></a>
       </li>
-      <li style="background: url(img/planeView_dark.jpg) center;" data-menuanchor="4thPage">
+      <li data-menuanchor="4thPage">
         <a class="menuItem goTo4" href="#4thPage" title="Fourth Section"><h4>CONTACT&nbsp;&nbsp;<i class="fa fa-file-text-o"></i></h4></a>
       </li>
 		</ul>
@@ -358,14 +324,7 @@ input:focus, textarea:focus {
 		
 	</div>
 	<div class="section" id="section1">
-		<div class="centerUp"><a class="goTo1" href="#"><!--WORK-->
-<!--<div class="mouse"><div class="wheel"></div></div>-->
-<div><span class="unu"></span> <span class="doi"></span> <span class="trei"></span> </div>
-            </a></div>
-		<div class="center"><a class="goTo3" href="#"><!--WORK-->
-<!--<div class="mouse"><div class="wheel"></div></div>-->
-<div><span class="unu"></span> <span class="doi"></span> <span class="trei"></span> </div>
-            </a></div>
+		
         <div class="lefty">
             <h1>WORK</h1>
             <p><strong>WORK</strong> is always in<br> <strong>progress</strong>.<br> 
@@ -376,13 +335,13 @@ input:focus, textarea:focus {
         </div>
         <div class="righty">
           <div class="row first">
-            <a href="img/work/HG_MOVE.jpg" data-rel="lightcase:work"><img src="img/work/MOVE_Thumb.jpg"/></a>
-            <a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"><img src="img/work/RechargeReturns.jpg"/></a>
+            <a href="img/work/MOVE.jpg" data-rel="lightcase:work"><img src="img/work/MOVE_Thumb.jpg"/></a>
+            <a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"><img src="img/work/RechargeReturns_Thumb.jpg"/></a>
             <a href="img/work/ManPing15wide.jpg" data-rel="lightcase:work"><img src="img/work/ManPing15_Thumb.jpg"/></a>
             <a href="img/work/carwash.jpg" data-rel="lightcase:work"><img src="img/work/carwash_Thumb.jpg"/></a>
             <a href="img/work/TSMN_p.jpg" data-rel="lightcase:work"><img src="img/work/TSMN_Thumb.jpg"/></a>
 			<a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/></a>
-            <a href="img/work/scavengerChamps.jpg" data-rel="lightcase:work"><img src="img/work/scavengerChamps.jpg"/></a>
+            <a href="img/work/scavengerChamps.jpg" data-rel="lightcase:work"><img src="img/work/scavengerChampsThumb.jpg"/></a>
           </div>
           <div class="row">
             <a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/></a>
@@ -390,102 +349,32 @@ input:focus, textarea:focus {
             <a href="img/work/ManPing14_burgundy.jpg" data-rel="lightcase:work"><img src="img/work/ManPing14_burgundy_Thumb.jpg"/></a>
             <a href="img/work/BabySitting.jpg" data-rel="lightcase:work"><img src="img/work/BabySitting_Thumb.jpg"/></a>
             <a href="img/work/QR_scavengerhunt.jpg" data-rel="lightcase:work"><img src="img/work/QR_scavengerhuntThumb.jpg"/></a>
-            <a href="img/work/ManPing15wide.jpg" data-rel="lightcase:work"><img src="img/work/RechargeReturns.jpg"/></a>
-            <a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"><img src="img/work/ManPing15_Thumb.jpg"/></a>
+            <a href="img/work/ManPing15wide.jpg" data-rel="lightcase:work"><img src="img/work/Manping15_Thumb.jpg"/></a>
+            <a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"><img src="img/work/RechargeReturns_Thumb.jpg"/></a>
           </div>
           <div class="row">
-            <a href="img/work/scavengerSUSHI.jpg" data-rel="lightcase:work"><img src="img/work/scavengerSUSHI.jpg"/></a>
+            <a href="img/work/scavengerSUSHI.jpg" data-rel="lightcase:work"><img src="img/work/scavengerSUSHI_Thumb.jpg"/></a>
             <a href="img/work/RechargeSplash.jpg" data-rel="lightcase:work"><img src="img/work/RechargeSplash_Thumb.jpg"/></a>
             <a href="img/work/Insomnia.jpg" data-rel="lightcase:work"><img src="img/work/Insomnia_Thumb.jpg"/></a>
             <a href="img/work/carwash.jpg" data-rel="lightcase:work"><img src="img/work/carwash_Thumb.jpg"/></a>
 			<a href="img/work/ManPing14_burgundy.jpg" data-rel="lightcase:work"><img src="img/work/ManPing14_burgundy_Thumb.jpg"/></a>
-            <a href="img/work/HG_MOVE.jpg" data-rel="lightcase:work"><img src="img/work/MOVE_Thumb.jpg"/></a>
+            <a href="img/work/MOVE.jpg" data-rel="lightcase:work"><img src="img/work/MOVE_Thumb.jpg"/></a>
             <a href="img/work/RechargeSplash.jpg" data-rel="lightcase:work"><img src="img/work/RechargeSplash_Thumb.jpg"/></a>
 		  </div>
-		<!--  <div class="row">
+		  <div class="row first">
+            <a href="img/work/MOVE.jpg" data-rel="lightcase:work"><img src="img/work/MOVE_Thumb.jpg"/></a>
+            <a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"><img src="img/work/RechargeReturns_Thumb.jpg"/></a>
+            <a href="img/work/ManPing15wide.jpg" data-rel="lightcase:work"><img src="img/work/ManPing15_Thumb.jpg"/></a>
             <a href="img/work/carwash.jpg" data-rel="lightcase:work"><img src="img/work/carwash_Thumb.jpg"/></a>
-            <a href="img/work/Insomnia.jpg" data-rel="lightcase:work"><img src="img/work/Insomnia_Thumb.jpg"/></a>
-            <a href="img/work/HG_MOVE.jpg" data-rel="lightcase:work"><img src="img/work/MOVE_Thumb.jpg"/></a>
             <a href="img/work/TSMN_p.jpg" data-rel="lightcase:work"><img src="img/work/TSMN_Thumb.jpg"/></a>
-            <a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/></a>
-            <a href="img/work/Insomnia.jpg" data-rel="lightcase:work"><img src="img/work/Insomnia_Thumb.jpg"/></a>
-            <a href="img/work/scavengerChamps.jpg" data-rel="lightcase:work"><img src="img/work/scavengerChamps.jpg"/></a>
+			<a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/></a>
+            <a href="img/work/scavengerChamps.jpg" data-rel="lightcase:work"><img src="img/work/scavengerChampsThumb.jpg"/></a>
           </div>
-          <div class="row">
-            <a href="img/work/Insomnia.jpg" data-rel="lightcase:work"><img src="img/work/Insomnia_Thumb.jpg"/></a>
-            <a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/></a>
-            <a href="img/work/ManPing14_burgundy.jpg" data-rel="lightcase:work"><img src="img/work/ManPing14_burgundy_Thumb.jpg"/></a>
-            <a href="img/work/BabySitting.jpg" data-rel="lightcase:work"><img src="img/work/BabySitting_Thumb.jpg"/></a>
-            <a href="img/work/QR_scavengerhunt.jpg" data-rel="lightcase:work"><img src="img/work/QR_scavengerhunt.jpg"/></a>
-            <a href="img/work/ManPing15wide.jpg" data-rel="lightcase:work"><img src="img/work/RechargeReturns.jpg"/></a>
-            <a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"><img src="img/work/ManPing15_Thumb.jpg"/></a>
-          </div>
-          <div class="row">
-            <a href="img/work/RechargeSplash.jpg" data-rel="lightcase:work"><img src="img/work/RechargeSplash_Thumb.jpg"/></a>
-            <a href="img/work/RechargeSplash.jpg" data-rel="lightcase:work"><img src="img/work/RechargeSplash_Thumb.jpg"/></a>
-            <a href="img/work/scavengerSUSHI.jpg" data-rel="lightcase:work"><img src="img/work/scavengerSUSHI.jpg"/></a>
-            <a href="img/work/TSMTLIFT.jpg" data-rel="lightcase:work"><img src="img/work/TSMTlift_Thumb.jpg"/></a>
-            <a href="img/work/HG_MOVE.jpg" data-rel="lightcase:work"><img src="img/work/MOVE_Thumb.jpg"/></a>
-            <a href="img/work/carwash.jpg" data-rel="lightcase:work"><img src="img/work/carwash_Thumb.jpg"/></a>
-			<a href="img/work/Manping14.jpg" data-rel="lightcase:work"><img src="img/work/Manping14.jpg"/></a>
-		  </div>-->
+	
         </div>
-	    <!--<div class="slide">
-            <div class="row">
-				<div class="box dark"><div class="fade"></div><img src="img/work/Insomnia_Insta.jpg"/></div>
-				<div class="box dark"><div class="fade"></div><img src="img/work/TSMN_instagram.jpg"/></div>
-				<div class="box dark"><div class="fade"></div><img src="img/work/TSMTliftINSTA.jpg"/></div>
-				<div class="box dark"><div class="fade"></div><img src="img/work/ManPing15.jpg"/></div>
-				<div class="box dark"><div class="fade"></div><img src="img/work/scavengerSUSHI.jpg"/></div>
-            </div>
-            <div class="row">
-                <div class="box dark"><div class="fade"></div><img src="img/work/LiftBLUESQUADinsta.jpg"/></div>
-				<div class="box dark"><div class="fade"></div><img src="img/work/instaLOGOcolorMAX.jpg"/></div>
-				<div class="box dark"><div class="fade"></div><img src="img/work/ManPing14_burgundy.jpg"/></div>
-				<div class="box dark"><div class="fade"></div><img src="img/work/TSMN_instagram.jpg"/></div>
-				<div class="box dark"><div class="fade"></div><img src="img/work/QR_scavengerhunt.jpg"/></div>
-                <div class="box dark"><div class="fade"></div><img src="img/work/RechargeSplash.jpg"/></div>
-            </div>
-            <div class="row">
-				<div class="box dark"><div class="fade"></div><img src="img/work/scavengerChamps.jpg"/></div>
-				<div class="box dark"><div class="fade"></div><img src="img/work/carwash_insta.jpg"/></div>
-				<div class="box dark"><div class="fade"></div><img src="img/work/Insomnia_Insta.jpg"/></div>
-				<div class="box dark"><div class="fade"></div><img src="img/work/TSMN_instagram.jpg"/></div>
-				<div class="box dark"><div class="fade"></div><img src="img/work/TSMTliftINSTA.jpg"/></div>
-            </div>
-		</div>-->
-	   <!-- <div class="slide">
-			<div class="intro">
-                <img src="img/KA.png" alt="King Apparel" />
-				<!--<img src="img/1.png" alt="simple" />
-				<h1>Simple</h1>
-				<p>Easy to use. Configurable and customizable.</p>
-			</div>
-		</div>
-	    <div class="slide">
-			<div class="intro">
-				<img src="img/2.png" alt="Cool" />
-				<h1>Cool</h1>
-				<p>It just looks cool. Impress everybody with a simple and modern web design!</p>
-			</div>
-		</div>
-	    <div class="slide">
-			<div class="intro">
-				<img src="img/3.png" alt="Compatible" />
-				<h1>Compatible</h1>
-				<p>Working in modern and old browsers too! IE 8 users don't have the fault of using that horrible browser! Lets give them a chance to see your site in a proper way!</p>
-			</div>
-		</div>-->
 	</div>
 	<div class="section" id="section2">
-		<div class="centerUp"><a class="goTo2" href="#"><!--WORK-->
-<!--<div class="mouse"><div class="wheel"></div></div>-->
-<div><span class="unu"></span> <span class="doi"></span> <span class="trei"></span> </div>
-            </a></div>
-		<div class="center"><a class="goTo4" href="#"><!--WORK-->
-<!--<div class="mouse"><div class="wheel"></div></div>-->
-<div><span class="unu"></span> <span class="doi"></span> <span class="trei"></span> </div>
-            </a></div>
+		
            <!-------------------------------------------------->
            <!--  THIS IS THE START OF THE NARROW VIEW LAYOUT -->
            <!-------------------------------------------------->
@@ -561,10 +450,6 @@ input:focus, textarea:focus {
               </div>
 	</div>
 	<div class="section" id="section3">
-	    <div class="centerUp"><a class="goTo3" href="#"><!--WORK-->
-<!--<div class="mouse"><div class="wheel"></div></div>-->
-<div><span class="unu"></span> <span class="doi"></span> <span class="trei"></span> </div>
-            </a></div>
 			<div class="leftside">
 			  <div id="info">
 				<h2>Jacob Stringfellow</h2>
@@ -616,13 +501,6 @@ input:focus, textarea:focus {
 </div>
 		
 		<script src="js/index.js"></script>
-        <script src="js/hamburger.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script> 
-		
-		<script src="js/loader.js"></script>
-		
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquerly.min.js'></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/1.1.1/jquery.parallax.min.js'></script>
-		<script src="js/parralax.js"></script>
 </body>
 </html>
