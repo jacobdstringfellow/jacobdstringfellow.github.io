@@ -1,0 +1,211 @@
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700);
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700);
+
+
+.icon-up-open-big { display: inline-block; }
+
+.icon-up-open-big:after {
+  content: "a";
+  font-size: 2.5em;
+  display: block;
+  -webkit-transform: rotateX(180deg);
+	  -ms-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  color: black;
+  -webkit-transition: color .3s;
+          transition: color .3s;
+}
+
+.icon-up-open-big:hover:after {
+	color: white;	
+}
+
+.scroll-icon {
+	position: absolute;
+ 	left: 50%;
+    bottom: 30px;
+    padding: 0 10px;
+  	-webkit-transform: translateX(-50%);
+  	    -ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+}
+
+/* HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.l-left {
+	float: left;
+}
+
+.l-right {
+	float: right;
+}
+
+.end {
+	margin-top: 30px;
+	font-size: 3em;
+	font-weight: bold;
+	opacity: 0;
+	-webkit-transform: translateY(300px);
+	    -ms-transform: translateY(300px);
+	        transform: translateY(300px);
+	-webkit-transition: opacity, -webkit-transform 1s;
+	        transition: opacity, -webkit-transform 1s;
+			transition: opacity, -ms-transform 1s;
+	        transition: opacity, transform 1s;
+	        transition: opacity, transform 1s, -webkit-transform 1s;
+			transition: opacity, transform 1s, -ms-transform 1s;
+	-webkit-transition-delay: 1s;
+	        transition-delay: 1s;
+}
+
+
+/* NAV STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.header-top {
+	height: 0px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 12;
+	box-sizing: border-box;
+}
+
+.headerOpen
+{
+	background:rgba(0,0,0,0);
+}
+
+header h1 {
+	line-height: 70px;
+	height: 70px;
+}
+
+h1 a {
+	display: block;
+}
+
+nav {
+
+  box-sizing: border-box;
+	position: fixed;
+	width: 100%;
+	box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+nav li
+{
+    height: 25%;
+}
+
+nav li a {
+    font-family: 'open sans', arial, sans-serif;
+	display: block;
+	text-align: center;
+	height: 100%;
+	-webkit-transition: background .3s;
+	        transition: background .3s;
+}
+
+nav li a h4
+{
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	top: 50%;
+	position: relative;
+	font-weight: bold;
+    font-weight: 900;
+}
+
+nav li:nth-child(odd) a,
+body.fp-viewing-fifthSection-1 #menu li:nth-child(5) a {
+	background: rgba(110,110,110, .1);;
+}
+
+nav li:nth-child(even) a {
+	background: rgba(110,110,110,0.05);
+}
+
+nav li:nth-child(odd) a:hover {
+	background: rgba(110,110,110,.2);
+}
+
+nav li:nth-child(even) a:hover {
+	background: rgba(110,110,110,0.2);
+}
+
+nav li.active a,
+body.fp-viewing-fifthSection-1 #menu li:last-child a {
+  
+}
+
+/* MQ STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+	
+
+@media screen and (max-width: 1000px)
+{
+    .header-top
+    {
+        height: 60px;
+    }
+    
+    .toggle-menu
+    {
+        top: 5px;
+    }
+    
+    #logo
+    {
+        width: 45px;
+        padding-top: 7px;
+    }
+    
+    nav ul
+    {
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header-top
+    {
+        height: 50px;
+    }
+    
+    .toggle-menu
+    {
+        top: 0px;
+    }
+    
+    #logo
+    {
+        width: 40px;
+    }
+    
+    nav ul
+    {
+        margin-top: -20px;
+    }
+    
+    .l-right
+    {
+        margin-right: -10px;
+    }
+}
+
