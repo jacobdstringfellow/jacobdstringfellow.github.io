@@ -53,37 +53,32 @@ $(".menu-toggle").on('click', function() {
 	}
 });
 
-
-$(".menu-toggle").on('mouseenter', function() {
-	$(this).addClass("on");
-    $('nav').fadeIn();
-});
-
-$("nav ul li a").on('click', function() {
-    $('nav').fadeOut();
-    $('.menu-toggle').removeClass("on");
-});
-
-/*=======================================================================
-		         END OF NAV STYLING - HAMBURGER MENU
-=======================================================================*/
-
 if (('ontouchstart' in window) && ((navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)))
 {
-   
+    $("nav ul li a").on('click', function() {
+        $('nav').fadeOut();
+        $('.menu-toggle').removeClass("on");
+    });
 }	 
 
 else
 {
 //behaviour and events for pointing device like mouse
 // toggle menu 
-
+    $(".menu-toggle").on('mouseenter', function() {
+        $(this).addClass("on");
+        $('nav').fadeIn();
+    });
+    
+    $("nav ul li a").on('click', function() {
+        $('nav').fadeOut();
+        $('.menu-toggle').removeClass("on");
+    });
 }
 
-$close.click(function() {
-    $header_top.removeClass('open-menu', 0, "swing");
-	$header_top.removeClass('headerOpen', 500, "swing");
-});
+/*=======================================================================
+		         END OF NAV STYLING - HAMBURGER MENU
+=======================================================================*/
 
 $('#fullpage').fullpage({
                 sectionsColor: ['#212121', '#212121', '#C9C9C9', '#293241', '#ccddff'],
@@ -110,13 +105,9 @@ $('#fullpage').fullpage({
 					$(this).dequeue();});
 					$('#section0').find('img').delay(1000).fadeTo(1000, 0); 
                         //alert("Page is loaded");
-                    $('#section0 h1').delay(2500).animate({
-                            marginTop: '-60px',
+                    $('#section0 #header').delay(2500).animate({
+                            marginTop: '0px',
                             opacity: 1
-                        }, 500);
-                    $('#section0 p').delay(2550).animate({
-                            opacity: 1,
-                            marginTop: '-1px'
                         }, 500);
                     $('#section0 i').delay(2700).animate({
                             opacity: 1,
