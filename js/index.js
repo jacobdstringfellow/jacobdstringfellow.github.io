@@ -206,6 +206,14 @@ $('#fullpage').fullpage({
 					$('.goTo1').click(function(e){
 						e.preventDefault();
 						$.fn.fullpage.moveTo(1);
+                        $('#section0 #header').delay(2500).animate({
+                            marginTop: '0px',
+                            opacity: 1
+                        }, 500);
+                        $('#section0 i').delay(2700).animate({
+                                opacity: 1,
+                                marginBottom: '1px'
+                            }, 500);  
 					});
 					
 					$('.goTo2').click(function(e){
@@ -285,19 +293,15 @@ $('#fullpage').fullpage({
                     
 					if(index == 2 && direction == "up")
 					{
-						$('#section0 h1').delay(2500).animate({
-                            marginTop: '-60px',
+						$('#section0 #header').delay(2500).animate({
+                            marginTop: '0px',
                             opacity: 1
                         }, 500);
-						$('#section0 p').delay(2550).animate({
-								opacity: 1,
-								marginTop: '-1px'
-							}, 500);
-						$('#section0 i').delay(2700).animate({
-								opacity: 1,
-								marginBottom: '1px'
-							}, 500); 
-					}
+                        $('#section0 i').delay(2700).animate({
+                                opacity: 1,
+                                marginBottom: '1px'
+                            }, 500);   
+                        }
 					
                     if(index == 2 && direction == "down")
 					{
@@ -329,30 +333,7 @@ $('#fullpage').fullpage({
                     if(index == 3 && direction =='down'){
                          //$('#section3 .rightside').delay(3000).addClass('animated fadeInUp');
                          //$('#section3 #info').addClass('animated fadeInUp');
-						 $('#section3 .leftside h2').delay(500).animate({
-                            marginTop: '-1px',
-                        }, 500);
-						$('#section3 #info').delay(500).animate({
-                            opacity: 1
-                        }, 500);
-                        
-                        if ( $(window).width() > 850) { 
-                             $('#section3 .rightside h2').delay(500).animate({
-                            marginTop: '-1px',
-                            }, 500);
-                            $('#section3 .rightside').delay(500).animate({
-                               opacity: 1
-                            }, 500);
-                        }
-                        
-                        if ( $(window).width() < 850) { 
-                             $('#section3 .rightside h2').delay(1500).animate({
-                                marginTop: '-1px',
-                            }, 500);
-                            $('#section3 .rightside').delay(1500).animate({
-                               opacity: 1
-                            }, 500);
-                        }
+						 
                         
                     }
 					

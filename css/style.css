@@ -300,7 +300,7 @@ main {
 }
 
 .layer1 {
-    background-image: url(../img/sky_back_blue.jpg);
+    background-image: url(../img/sky_back_bluemin.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -366,7 +366,7 @@ header h1 a
 /* Defining each section background and styles
 * --------------------------------------- */
 #section0{
-    background: url('../img/skyline_darkS.jpg');
+    background: url('../img/skyline_darkSmin.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -719,10 +719,10 @@ svg
 	-ms-transform: skewX(-15deg);
 	-webkit-transform: skewX(-15deg);
     margin-left: -20%;
-	background: url('../img/skyDark.jpg');
-    background-size: cover;
+	//background: url('../img/skyDark.jpg');
+    //background-size: cover;
     //background-attachment: fixed;
-	background-position: top left;
+	//background-position: top left;
 }
 
 #section1 .righty
@@ -949,13 +949,13 @@ svg
 #left
 {
 	left: 0px;
-	background: url(../img/codeDeskC2.jpg) no-repeat center; 
+	background: url(../img/codeDeskC3.jpg) no-repeat center; 
 }
 
 #right
 {
 	right: 0px;
-    background: url(../img/designDeskC.jpg) no-repeat center;
+    background: url(../img/designDeskC3.jpg) no-repeat center;
 }
 
 #left, #right
@@ -1043,7 +1043,7 @@ svg
 
 #section3
 {
-	background: transparent url("../img/meJump_b.jpg") repeat scroll center top / cover;
+	//background: transparent url("../img/meJump_bmin.jpg") repeat scroll center top / cover;
 }
 
 #section3 img
@@ -1071,7 +1071,7 @@ svg
 	height: 100%;
 	box-sizing: border-box;
 	display: table;
-    opacity: 0;
+    opacity: 1;
 }
 
 #section3 #info
@@ -1079,7 +1079,7 @@ svg
 	display: table-cell;
 	vertical-align: middle;
     margin-top: -60px;
-    opacity: 0;
+    opacity: 1;
 }
 
 #infoL, #infoR
