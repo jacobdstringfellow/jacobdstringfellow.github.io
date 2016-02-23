@@ -338,6 +338,7 @@ main {
 #section3{
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 #logo
