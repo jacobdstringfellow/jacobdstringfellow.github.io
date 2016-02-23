@@ -655,16 +655,15 @@ svg
     background: url('../img/skyDark.jpg');
     background-size: cover;
     background-attachment: fixed;
-    height:
 }
 
 #section1 p
 {
-    -webkit-transform: skewX(15deg);
-	-ms-transform: skewX(15deg);
-	transform: skewX(15deg);
+    -webkit-transform: skewX(10deg);
+	-ms-transform: skewX(10deg);
+	transform: skewX(10deg);
     padding-left: 235px;
-    color: rgb(189, 189, 189);
+    color: #B5B5B7;
     font-size: 1.7em;
     text-align: center;
     opacity: 0;
@@ -673,8 +672,8 @@ svg
 
 #section1 h1
 {
-    color: #757575;
-    border: thick solid #757575;
+    color: #B5B5B7;
+    border: thick solid #B5B5B7;
    // top: 54%;
     //color: #fb2d2d;
 	//color: #EEEEEE;
@@ -693,9 +692,9 @@ svg
 	//-webkit-transform: translate(-50%, -50%);
     margin-top: 110px;
     margin-left: 150px;
-    transform: skewX(15deg);
-	-ms-transform: skewX(15deg);
-	-webkit-transform: skewX(15deg);
+    transform: skewX(10deg);
+	-ms-transform: skewX(10deg);
+	-webkit-transform: skewX(10deg);
 }
 
 #section1 .row
@@ -705,19 +704,17 @@ svg
 
 #section1 .lefty
 {
-	background: #3d5A80;
 	float: left;
     position: absolute;
 	z-index: 1;
 	width: 60%;
     height: 100%;
 	padding: 15px;
-	background: rgba(255,255,255,0.95);
-    background: #424242;
+    background: #252839;
 	box-sizing: border-box;
-    transform: skewX(-15deg);
-	-ms-transform: skewX(-15deg);
-	-webkit-transform: skewX(-15deg);
+    transform: skewX(-10deg);
+	-ms-transform: skewX(-10deg);
+	-webkit-transform: skewX(-10deg);
     margin-left: -20%;
 	//background: url('../img/skyDark.jpg');
     //background-size: cover;
@@ -763,9 +760,9 @@ svg
     width: 60%;
     overflow: hidden;
     display: inline-block;
-    transform: skewX(-20deg);
-	-ms-transform: skewX(-20deg);
-	-webkit-transform: skewX(-20deg);
+    transform: skewX(-10deg);
+	-ms-transform: skewX(-10deg);
+	-webkit-transform: skewX(-10deg);
     transition: width 1.2s ease-in-out;
     margin-left: -76px;
     pointer-events: none;
@@ -1044,6 +1041,7 @@ svg
 #section3
 {
 	//background: transparent url("../img/meJump_bmin.jpg") repeat scroll center top / cover;
+    background: #252839;
 }
 
 #section3 img
@@ -1055,12 +1053,11 @@ svg
 
 #section3 .leftside
 {
-	background: #3d5A80;
+	background: #677077;
 	float: left;
 	width: 50%;
     height: 100%;
 	padding: 15px;
-	background: rgba(61,90,128,0.7);
 	box-sizing: border-box;
 	display: table;
 }
@@ -1072,6 +1069,7 @@ svg
 	box-sizing: border-box;
 	display: table;
     opacity: 1;
+    
 }
 
 #section3 #info
@@ -1100,14 +1098,14 @@ svg
 #section3 .rightside h2
 {
 	padding-bottom: 20px;
-    color: #EE6C4D;
+    color: #F2B632;
 }
 
 #section3 h2
 {
 	font-size: 2em;
 	text-transform: none;
-	color: #98C1D9;
+	color: #252839;
 	font-weight: 900;
 	display: block;
 	margin-top: 200px;
@@ -1133,7 +1131,7 @@ svg
 
 #section3 i
 {
-	color: #98C1D9;
+	color: #252839;
 }
 
 #section3 h5
@@ -1148,7 +1146,7 @@ svg
 
 #section3 a
 {
-	color: #98C1D9;
+	color: #252839;
 	text-transform: none;
 }
 

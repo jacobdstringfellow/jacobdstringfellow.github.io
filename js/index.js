@@ -90,7 +90,7 @@ $('#fullpage').fullpage({
                 css3: false,
                 slidesNavigation: true,
                 controlArrows: true,
-                responsiveWidth: '850',
+                responsiveWidth: '1850',
                     
                 afterLoad: function(anchorLink, index)
                 {	
@@ -354,7 +354,7 @@ $('#fullpage').fullpage({
                       $.fn.fullpage.setAllowScrolling(false, 'up');
                       $header_top.css('background', 'transparent');
                       $nav.css('background', 'transparent');
-                      $(this).css('background', '#374140');
+                      //$(this).css('background', '#374140');
                       $(this).find('p').css(
                         {
                           'color': '#DC3522',
