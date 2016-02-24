@@ -1103,6 +1103,11 @@ svg
 	vertical-align: middle;
 }
 
+.leftside p
+{
+    text-indent: 40px;
+}
+
 #form-div {
 	width: 70%;
 	margin: auto;
@@ -1303,7 +1308,6 @@ input:focus, textarea:focus {
 	padding-left: 30px;
     padding-right: 30px;
     padding-top: 30px;
-	text-indent: 40px;
 	text-align: left;
 }
 
