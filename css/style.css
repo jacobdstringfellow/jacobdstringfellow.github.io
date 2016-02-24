@@ -1153,29 +1153,29 @@ svg
 
 /* Icons ---------------------------------- */
 #name{
-	background-image: url(img/user.png);
+	background-image: url(../img/user.png);
 	background-size: 30px 30px;
 	background-position: 11px 8px;
 	background-repeat: no-repeat;
 }
 
 #name:focus{
-	background-image: url(img/userW.png);
+	background-image: url(../img/userW.png);
 }
 
 #email{
-	background-image: url(img/email.png);
+	background-image: url(../img/email.png);
 	background-size: 30px 30px;
 	background-position: 11px 8px;
 	background-repeat: no-repeat;
 }
 
 #email:focus{
-	background-image: url(img/emailW.png);
+	background-image: url(../img/emailW.png);
 }
 
 #comment{
-	background-image: url(img/comments.png);
+	background-image: url(../img/comments.png);
 	background-size: 30px 30px;
 	background-position: 11px 8px;
 	background-repeat: no-repeat;
