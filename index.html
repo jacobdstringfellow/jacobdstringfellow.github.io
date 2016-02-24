@@ -59,7 +59,7 @@
 	<link rel="shortcut icon" href="img/meOutline.png" />
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<!--<link rel="stylesheet" type="text/css" href="css/style.css" />-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/lightcase.css">
 	
@@ -259,6 +259,18 @@ input:focus, textarea:focus {
 		</script>
 	<![endif]-->
 	
+    <script>
+        var cb = function() {
+        var l = document.createElement('link'); l.rel = 'stylesheet';
+        l.href = 'css/style.css';
+        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+        if (raf) raf(cb);
+        else window.addEventListener('load', cb);
+    </script>
+    
 </head>
 <body>
 <header>
