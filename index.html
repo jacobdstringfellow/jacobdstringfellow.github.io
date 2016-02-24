@@ -266,7 +266,7 @@ input:focus, textarea:focus {
 	<script>
         jQuery(document).ready(function($) {
                //Lightcase for work photos
-			$('#scene').parallax();                     //For parralax background on home page
+			//$('#scene').parallax();                     //For parralax background on home page
         });
     </script>
 	
@@ -517,6 +517,8 @@ input:focus, textarea:focus {
             function downloadJSAtOnload() {
                 alert("Now javascripts will load.");
                 var element = document.createElement("script");
+                $('#scene').parallax();
+                element.src = 'https://cdnjs.cloudflare.com/ajax/libs/parallax/1.1.1/jquery.parallax.min.js';
                 element.src = "js/lightcase.js";
                 $('a[data-rel^=lightcase]').lightcase(); 
                 document.body.appendChild(element);
