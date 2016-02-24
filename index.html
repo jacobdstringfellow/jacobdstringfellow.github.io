@@ -261,11 +261,11 @@ input:focus, textarea:focus {
 	<![endif]-->
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="js/lightcase.js"></script>
+    <!--<script type="text/javascript" src="js/lightcase.js"></script>-->
 	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 	<script>
         jQuery(document).ready(function($) {
-            $('a[data-rel^=lightcase]').lightcase();    //Lightcase for work photos
+               //Lightcase for work photos
 			$('#scene').parallax();                     //For parralax background on home page
         });
     </script>
@@ -512,8 +512,22 @@ input:focus, textarea:focus {
 
 	</div>
 </div>
-		
-		<script src="js/index.js"></script>
+    
+        <script type="text/javascript">
+            function downloadJSAtOnload() {
+                alert("Now javascripts will load.");
+                var element = document.createElement("script");
+                element.src = "js/lightcase.js";
+                $('a[data-rel^=lightcase]').lightcase(); 
+                document.body.appendChild(element);
+            }
+            if (window.addEventListener)
+                window.addEventListener("load", downloadJSAtOnload, false);
+            else if (window.attachEvent)
+                window.attachEvent("onload", downloadJSAtOnload);
+            else window.onload = downloadJSAtOnload;
+        </script>
+        <script src="js/index.js"></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/1.1.1/jquery.parallax.min.js'></script>
 </body>
 </html>
