@@ -1082,7 +1082,7 @@ svg
 	height: 100%;
 	box-sizing: border-box;
 	display: table;
-    opacity: 1; 
+    opacity: 0; 
 }
 
 /*---------------------------------------
@@ -1260,7 +1260,7 @@ input:focus, textarea:focus {
 	display: table-cell;
 	vertical-align: middle;
     margin-top: -60px;
-    opacity: 1;
+    opacity: 0;
 }
 
 #infoL, #infoR

@@ -52,12 +52,9 @@
 
 
 	<link rel="shortcut icon" href="img/meOutline.png" />
-
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.min.css" />
 	<!--<link rel="stylesheet" type="text/css" href="css/style.css" />-->
     
-	
-	
 	<!--[if lte IE 9]>
 	<link rel="stylesheet" type="text/css" href="css/styleIE.css" />
 	<![endif]-->
@@ -260,7 +257,23 @@
         if (raf) raf(cb);
         else window.addEventListener('load', cb);
     </script>
+    <script>
+    /*=======================================================================
+                     STYLES FOR THE WEBSITE LOADER ANIMATION
+    =======================================================================*/
+    $(window).load(function() {
+
+            $(this).delay(2000).queue(function(){
+            $('body').addClass('loaded');
+            $(this).dequeue();});
+    });
+
+    /*=======================================================================
+                  END OF STYLES FOR WEBSITE LOADER ANIMATION
+    =======================================================================*/
+    </script>
     
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
 <header>
@@ -506,7 +519,7 @@
 </div>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/lightcase.css">
-        <script type="text/javascript" src="js/lightcase.js"></script>
+        <script type="text/javascript" src="js/lightcase.js" defer></script>
         <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
         <script>
             jQuery(document).ready(function($) {
@@ -515,8 +528,9 @@
             });
         </script>
 		<script src="js/index.js"></script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/1.1.1/jquery.parallax.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/1.1.1/jquery.parallax.min.js' defer></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+        
+    
 </body>
 </html>

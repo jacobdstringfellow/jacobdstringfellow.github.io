@@ -6,21 +6,6 @@ var $close = $('.close');
 var $headerClose = $('.header-top.open-menu');
 
 /*=======================================================================
-		         STYLES FOR THE WEBSITE LOADER ANIMATION
-=======================================================================*/
-
-$(window).load(function() {
-		
-        $(this).delay(2000).queue(function(){
-        $('body').addClass('loaded');
-        $(this).dequeue();});
-});
-
-/*=======================================================================
-		      END OF STYLES FOR WEBSITE LOADER ANIMATION
-=======================================================================*/
-
-/*=======================================================================
 		   STYLES FOR THE PARRALAX BACKGROUND OF THE FIRST PAGE
 =======================================================================*/
 function isIE () {
@@ -90,7 +75,8 @@ $('#fullpage').fullpage({
                 css3: false,
                 slidesNavigation: true,
                 controlArrows: true,
-                responsiveWidth: '1850',
+                responsiveWidth: '850',
+                autoScrolling: false,
                     
                 afterLoad: function(anchorLink, index)
                 {	
@@ -333,7 +319,30 @@ $('#fullpage').fullpage({
                     if(index == 3 && direction =='down'){
                          //$('#section3 .rightside').delay(3000).addClass('animated fadeInUp');
                          //$('#section3 #info').addClass('animated fadeInUp');
-						 
+						 $('#section3 .leftside h2').delay(600).animate({
+                            marginTop: '-1px',
+                        }, 500);
+						$('#section3 #info').delay(600).animate({
+								opacity: 1
+							}, 500);
+						
+						if ( $(window).width() > 850) { 
+                             $('#section3 .rightside h2').delay(600).animate({
+                            marginTop: '-1px',
+                            }, 500);
+                            $('#section3 .rightside').delay(600).animate({
+                               opacity: 1
+                            }, 500);
+                        }
+                        
+                        if ( $(window).width() < 850) { 
+                             $('#section3 .rightside h2').delay(1800).animate({
+                                marginTop: '-1px',
+                            }, 500);
+                            $('#section3 .rightside').delay(1500).animate({
+                               opacity: 1
+                            }, 500);
+                        }
                         
                     }
 					
