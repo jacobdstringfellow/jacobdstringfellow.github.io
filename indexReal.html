@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<!-- 
+    http://www.awwwards.com/trendy-web-color-palettes-and-material-design-color-schemes-tools.html
+    http://www.yottaa.com/company/blog/application-optimization/why-your-website-is-slow-image-performance/
+    http://www.bannersnack.com/blog/13-free-website-and-marketing-grader-tools/
+
+	Check
+	check out Bower, Modernizr, PrefixFree
+	http://speckyboy.com/2013/07/10/your-page-speed-down-cut-your-pages-loading-time-in-half-with-some-simple-jquery/
+	https://www.smashingmagazine.com/2009/04/15-essential-checks-before-launching-your-website/
+	http://www.my-debugbar.com/wiki/IETester/HomePage   IE TESTER
+	http://browsershots.org/
+	https://crossbrowsertesting.com/freetrial
+	https://gtmetrix.com/
+    nibbler
+    woorank
+	http://nibbler.silktide.com/en_US/reports/jacobdstringfellow.github.io
+	http://www.coconutstrategy.com/blog/2014/04/the-7-best-tools-for-testing-your-website
+	https://www.quora.com/How-do-I-find-out-whats-slowing-down-my-website
+    http://tools.pingdom.com/fpt/
+    http://bsscommerce.com/blog/magento-optimize-site-speed-gtmetrix/
+    https://developer.yahoo.com/performance/
+    http://www.appelsiini.net/projects/lazyload
+    https://css-tricks.com/css-sprites/
+    gzip
+
+	IE10 - any mouse movement scrolls page up
+    SAFARI - Completely messed up
+	Add alts and titles for every image
+    Leverage browser caching
+    Defer parsing of javascript
+        https://varvy.com/pagespeed/defer-loading-javascript.html
+
+    SEO
+        http://blog.hubspot.com/blog/tabid/6307/bid/33164/6-SEO-Tools-to-Analyze-Your-Site-Like-Google-Does.aspx
+
+    DESIGN IDEAS
+    -zoom pics on scroll!
+    -scrollreveal js
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>Jacob Stringfellow Portfolio | Web Design </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="author" content="Jacob Daniel Stringfellow" />
+	<meta name="description" content="Portfolio website for Jacob D Stringfellow, Web Designer and Developer from Long Island, New York" />
+	<meta name="keywords"  content="Jacob, Stringfellow, Portfolio, Design, Web, Long Island, New York, LI, NY" />
+	<meta name="Resource-type" content="Document" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+	<link rel="shortcut icon" href="img/meOutline.png" />
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/lightcase.css">
+	
+	<!--[if lte IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/styleIE.css" />
+	<![endif]-->
+    
+	<style type="text/css">
+
+		/* Sections
+		 * --------------------------------------- */
+		.intro p{
+			width: 50%;
+			margin: 0 auto;
+			font-size: 1.5em;
+		}
+		/* Overwriting styles for the navigation dots (to place it where we want)
+		* --------------------------------------- */
+		.fp-slidesNav.bottom{
+			bottom: 25px;
+		}
+
+		#section2 #html{
+			position:relative;
+		}
+		
+		a img {
+			border: 0;
+			border: none;
+			border: medium solid red;
+		}
+		
+		#feedback-page{
+	text-align:center;
+}
+
+#text-feedback{
+	width: 80%;
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color:white;
+	text-align:center;
+}
+
+#form-main{
+	width:100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#form-div {
+	width: 70%;
+	margin: auto;
+}
+
+#form-div p
+{
+	padding: 0;
+	text-indent: 0;
+}
+
+.feedback-input {
+	color:#F2B632;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight:600;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: rgba(41,50,65,0.5);
+    border: 2px solid #F2B632;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.feedback-input:focus{
+	background: rgba(41,50,65,0.7);
+	box-shadow: none;
+	color: #F2B632;
+	border: 2px solid #E0FBFC;
+	outline: none;
+  padding: 13px 13px 13px 54px;
+}
+
+.focused{
+	color:#30aed6;
+	border:#F2B632; solid 3px;
+}
+
+/* Icons ---------------------------------- */
+#name{
+	background-image: url(img/user.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#name:focus{
+	background-image: url(img/userW.png);
+}
+
+#email{
+	background-image: url(img/email.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email:focus{
+	background-image: url(img/emailW.png);
+}
+
+#comment{
+	background-image: url(img/comments.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+textarea {
+	width: 100%;
+	height: 150px;
+	line-height: 150%;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	background-color: rgba(41,50,65,0.7);
+}
+
+#button-blue{
+	font-family: 'Open Sans', Helvetica, Arial,  sans-serif;
+	font-weight: 700;
+	float:left;
+	width: 100%;
+	border: 2px solid #F2B632;
+	cursor:pointer;
+	background-color: rgba(41,50,65,0.5);
+	color: #F2B632;
+	font-size:24px;
+	padding-top:10px;
+	padding-bottom:10px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #293241;
+	border: 2px solid #E0FBFC;
+}
+	
+.submit
+{
+	width: 150px;
+	margin: auto;
+}
+
+.submit:hover {
+	color: #293241;
+}
+	
+.ease {
+	width: 0px;
+	height: 55px;
+	background-color: #EE6C4D;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color: #E0FBFC;
+}
+
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}		
+	</style>
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+	
+</head>
+<body>
+<header>
+
+<div id="topNav" class="menu-section header-top">
+  <h1 class="l-left"><a><img id="logo" src="img/meInvert_Lite.png"/></a></h1>
+  <div class="menu-toggle">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+  </div>
+  <nav>
+		<ul role="navigation">
+	  <li data-menuanchor="1stPage">
+        <a class="menuItem goTo1" href="#1stPage" title="First Section"><h4>HELLO&nbsp;&nbsp;<i class="fa fa-hand-paper-o fa-spin"></i></h4></a>
+      </li>
+      <li data-menuanchor="2ndPage">
+        <a class="menuItem goTo2" href="#2ndPage" title="Second Section"><h4>WORK&nbsp;&nbsp;<i class="fa fa-desktop"></i></h4></a>
+      </li>
+      <li data-menuanchor="3rdPage">
+        <a id="moveTo" class="menuItem goTo3" href="#3rdPage" title="Second Section"><h4>SKILLS&nbsp;&nbsp;<i class="fa fa-keyboard-o"></i></h4></a>
+      </li>
+      <li data-menuanchor="4thPage">
+        <a class="menuItem goTo4" href="#4thPage" title="Fourth Section"><h4>CONTACT&nbsp;&nbsp;<i class="fa fa-file-text-o"></i></h4></a>
+      </li>
+		</ul>
+	</nav>
+</div>
+    
+</header>
+<div id="fullpage">
+	<div class="section" id="section0">
+        <div id="loader-wrapper">
+			<div id="loader"></div><img id="logoLoad" src="img/meOutline.png"/>
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+		</div>
+        <main>
+      <div id="overlay"></div>
+      <ul id="scene">
+        <li class="layer" data-depth="0.1">
+          <div class="layer1"></div>
+            
+        </li>
+        <li class="layer" data-depth="0.2">
+          <div class="layer2"></div>
+            <div id="header">
+            <h1>J<strong>A</strong>C<strong>O</strong>B</h1>
+            <p>
+            STRINGFELLOW<br>
+            </p>
+        </div>
+        </li>
+      </ul>
+      
+    </main>
+        <!--<div id="header">
+            <h1>J<strong>A</strong>C<strong>O</strong>B</h1>
+            <p>
+            STRINGFELLOW<br>
+            </p>
+        </div>-->
+            
+		<a class="goTo2" href="#"><i class="fa fa-arrow-circle-down"></i></a>
+		
+	</div>
+	<div class="section" id="section1">
+		
+        <div class="lefty">
+            <h1>WORK</h1>
+            <p><strong>WORK</strong> is always in<br> <strong>progress</strong>.<br> 
+            <strong>More</strong> work is yet to come.<br>
+            <strong>Please</strong> see the<br>
+            <strong>Contact</strong> page for<br>
+            <strong>More</strong> information.</p>
+        </div>
+        <div class="righty">
+          <div class="row first">
+            <a href="img/work/MOVE.jpg" data-rel="lightcase:work"><img src="img/work/MOVE_Thumb.jpg"/></a>
+            <a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"><img src="img/work/RechargeReturns_Thumb.jpg"/></a>
+            <a href="img/work/ManPing15wide.jpg" data-rel="lightcase:work"><img src="img/work/ManPing15_Thumb.jpg"/></a>
+            <a href="img/work/carwash.jpg" data-rel="lightcase:work"><img src="img/work/carwash_Thumb.jpg"/></a>
+            <a href="img/work/TSMN_p.jpg" data-rel="lightcase:work"><img src="img/work/TSMN_Thumb.jpg"/></a>
+			<a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/></a>
+            <a href="img/work/scavengerChamps.jpg" data-rel="lightcase:work"><img src="img/work/scavengerChampsThumb.jpg"/></a>
+          </div><!--
+          <div class="row">
+            <a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/></a>
+            <a href="img/work/TSMTLIFT.jpg" data-rel="lightcase:work"><img src="img/work/TSMTlift_Thumb.jpg"/></a>  
+            <a href="img/work/ManPing14_burgundy.jpg" data-rel="lightcase:work"><img src="img/work/ManPing14_burgundy_Thumb.jpg"/></a>
+            <a href="img/work/BabySitting.jpg" data-rel="lightcase:work"><img src="img/work/BabySitting_Thumb.jpg"/></a>
+            <a href="img/work/QR_scavengerhunt.jpg" data-rel="lightcase:work"><img src="img/work/QR_scavengerhuntThumb.jpg"/></a>
+            <a href="img/work/ManPing15wide.jpg" data-rel="lightcase:work"><img src="img/work/Manping15_Thumb.jpg"/></a>
+            <a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"><img src="img/work/RechargeReturns_Thumb.jpg"/></a>
+          </div>
+          <div class="row">
+            <a href="img/work/scavengerSUSHI.jpg" data-rel="lightcase:work"><img src="img/work/scavengerSUSHI_Thumb.jpg"/></a>
+            <a href="img/work/RechargeSplash.jpg" data-rel="lightcase:work"><img src="img/work/RechargeSplash_Thumb.jpg"/></a>
+            <a href="img/work/Insomnia.jpg" data-rel="lightcase:work"><img src="img/work/Insomnia_Thumb.jpg"/></a>
+            <a href="img/work/carwash.jpg" data-rel="lightcase:work"><img src="img/work/carwash_Thumb.jpg"/></a>
+			<a href="img/work/ManPing14_burgundy.jpg" data-rel="lightcase:work"><img src="img/work/ManPing14_burgundy_Thumb.jpg"/></a>
+            <a href="img/work/MOVE.jpg" data-rel="lightcase:work"><img src="img/work/MOVE_Thumb.jpg"/></a>
+            <a href="img/work/RechargeSplash.jpg" data-rel="lightcase:work"><img src="img/work/RechargeSplash_Thumb.jpg"/></a>
+		  </div>
+		  <div class="row first">
+            <a href="img/work/MOVE.jpg" data-rel="lightcase:work"><img src="img/work/MOVE_Thumb.jpg"/></a>
+            <a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"><img src="img/work/RechargeReturns_Thumb.jpg"/></a>
+            <a href="img/work/ManPing15wide.jpg" data-rel="lightcase:work"><img src="img/work/ManPing15_Thumb.jpg"/></a>
+            <a href="img/work/carwash.jpg" data-rel="lightcase:work"><img src="img/work/carwash_Thumb.jpg"/></a>
+            <a href="img/work/TSMN_p.jpg" data-rel="lightcase:work"><img src="img/work/TSMN_Thumb.jpg"/></a>
+			<a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/></a>
+            <a href="img/work/scavengerChamps.jpg" data-rel="lightcase:work"><img src="img/work/scavengerChampsThumb.jpg"/></a>
+          </div>
+	-->
+        </div>
+	</div>
+	<div class="section" id="section2">
+		
+           <!-------------------------------------------------->
+           <!--  THIS IS THE START OF THE NARROW VIEW LAYOUT -->
+           <!-------------------------------------------------->
+           <div id="mobileDesign">
+                <div style="vertical-align: middle;">
+                <img src="img/crownR.png" alt="Crown Design">
+                <h2>Design</h2>
+                <h4>HTML & CSS</h4>
+                <div class="bar"><div class="html"></div></div>
+                <h4>JavaScript</h4>
+                <div class="bar"><div class="js"></div></div>
+                <h4>Dreamweaver</h4>
+                <div class="bar"><div class="dream"></div></div>
+                <h4>Bootstrap</h4>
+                <div class="bar"><div class="boot"></div></div>
+                </div>
+            </div>
+            <div id="mobileCode">
+                <img src="img/codeIconR.png" alt="Code Development">
+                <h2>Development</h2>
+                <h4>PHP</h4>
+                <div class="bar"><div class="php"></div></div>
+                <h4>MySQL</h4>
+                <div class="bar"><div class="sql"></div></div>
+                <h4>Java</h4>
+                <div class="bar"><div class="java"></div></div>
+                <h4>C++</h4>
+                <div class="bar"><div class="c"></div></div>
+            </div>
+        <!-------------------------------------------------->
+        <!--   THIS IS THE START OF THE WIDE VIEW LAYOUT  -->
+        <!-------------------------------------------------->
+           <div id="topSkills">
+			<div id="heading">
+				<h1>SKILLS</h1>
+            </div>
+           </div>
+            <div id="bottomSkills" class="popup">
+				<div id="left">
+                    <i id="infoL" class="fa fa-info-circle"></i>
+					<div id="leftInfo">
+						<div id="leftContainer">
+							<img src="img/codeIconR.png" alt="Code Development">
+                            <h4>PHP</h4>
+							<div class="bar"><div class="php"></div></div>
+                            <h4>MySQL</h4>
+							<div class="bar"><div class="sql"></div></div>
+                            <h4>Java</h4>
+							<div class="bar"><div class="java"></div></div>
+                            <h4>C++</h4>
+							<div class="bar"><div class="c"></div></div>
+						</div>
+					</div>
+				</div> 
+				<div id="right">
+                    <i id="infoR" class="fa fa-info-circle"></i>
+					<div id="rightInfo">
+						<div id="rightContainer">
+							<div style="vertical-align: middle;">
+							<img src="img/crownR.png" alt="Crown Design">
+                            <h4>HTML & CSS</h4>
+							<div class="bar"><div class="html"></div></div>
+                            <h4>JavaScript</h4>
+							<div class="bar"><div class="js"></div></div>
+                            <h4>Dreamweaver</h4>
+							<div class="bar"><div class="dream"></div></div>
+                            <h4>Bootstrap</h4>
+							<div class="bar"><div class="boot"></div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+              </div>
+	</div>
+	<div class="section" id="section3">
+			<div class="leftside">
+			  <div id="info">
+				<h2>Jacob Stringfellow</h2>
+				<h4>Web Designer</h4>
+				<p>Web Design is an ever expanding world that I love being a part of. The endless possibilities and uncapped creativity that the web design world allows for is something I do not take for granted.</p>
+                <p>I also have a passion for graphic design, web & database development, video editing and even photography. I would love to help your brand come to life by utilizing any of these skills for your company. Thank you for visiting and please contact me for any inquiries or thoughts.</p>
+				<h5 style="padding-top: 40px;"><i class="fa fa-envelope-o"></i> <strong>Email : </strong>  <a href="mailto:jacobdstringfellow@gmail.com">jacobdstringfellow@gmail.com</a></h5>
+				<h5><i class="fa fa-file-o"></i> <strong>Resume : </strong><a href="resume.jpg" data-rel="lightcase">Click to View</a></h5>
+			  </div>
+			</div>
+			<div class="rightside">
+				<!--<h2>Contact</h2>
+				<h5>Graduated Cum Laude from Farmingdale State College in December 2015.</h5>
+				<h5>Bachelors Degree in Software Engineering and Web Design.</h5>
+				<h5>2+ years experience with HTML, jQuery, JavaScript, PHP, and MySQL.</h5>
+				<h5>Intermediate experience with Bootstrap and Dreamweaver.</h5>
+				<h5></h5>-->
+				<div id="form-main">
+					<h2>Contact Me</h2>
+					<div id="form-div">
+					<form class="form" id="form1">
+					  <p class="name">
+						<input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name"/>
+					  </p>
+					  
+					  <p class="email">
+						<input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+					  </p>
+					  
+					  <p class="text">
+						<textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+					  </p>
+					  
+					  <div class="submit">
+						<input type="submit" value="SEND" id="button-blue"/>
+						<div class="ease"></div>
+					  </div>
+					</form>
+					</div>
+				</div>
+			</div>
+			<footer>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook-square"></i>
+				<p>JS Design</p>
+			</footer>
+
+	</div>
+</div>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/lightcase.js"></script>
+        <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+        <script>
+            jQuery(document).ready(function($) {
+                $('a[data-rel^=lightcase]').lightcase();    //Lightcase for work photos
+                $('#scene').parallax();                     //For parralax background on home page
+            });
+        </script>
+		<script src="js/index.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/1.1.1/jquery.parallax.min.js'></script>
+
+</body>
+</html>

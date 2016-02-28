@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://jacobdstringfellow.github.io/sitemap.xml
+Sitemap: http://jacobstringfellow.com/sitemap.xml
