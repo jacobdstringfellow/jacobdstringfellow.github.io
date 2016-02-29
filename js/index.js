@@ -7,7 +7,7 @@ $(".menu-toggle").on('click', function() {
 	$(this).toggleClass("on");
 
 	if( $("nav").css('display') == 'none') {
-		$('nav').slideDown();
+		$('nav').fadeIn();
 	}
 	else
 	{
@@ -380,6 +380,7 @@ else {
                 css3: false,
 				lockAnchors: true,
                 autoScrolling: false,
+                fitToSection: false,
                     
                 afterLoad: function(anchorLink, index)
                 {	

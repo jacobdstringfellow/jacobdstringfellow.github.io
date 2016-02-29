@@ -317,7 +317,7 @@ svg
 	display: table;
     float: right;
 }
-
+/*
 #section1 .righty a img
 {
     width: 17%;
@@ -341,7 +341,7 @@ svg
 {
 	margin: -1.4px;
 }
-
+*/
 #section1 .slider
 {
     width: 60%;
@@ -957,6 +957,11 @@ input:focus, textarea:focus {
 
 @media screen and (max-width: 850px)
 {
+    #section2 h1
+    {
+        opacity: 0;
+    }
+    
     #section1 .lefty
     {
         width: 100%;
@@ -1001,6 +1006,7 @@ input:focus, textarea:focus {
         overflow: hidden;
     }
     
+    /*
     #section1 .righty a img
     {
         width: 33.33%;
@@ -1008,7 +1014,7 @@ input:focus, textarea:focus {
         -webkit-filter: none;
         opacity: 0.8;
     }
-    
+    */
     #section2 #mobileCode .bar
     {
         background: #757575;
@@ -1026,6 +1032,17 @@ input:focus, textarea:focus {
         padding-top: 50px;
         padding-bottom: 100px;
         height: auto;
+        opacity: 1;
+    }
+    
+    #section3 #info
+    {
+        opacity: 1;
+    }
+    
+    #section3 h2
+    {
+        margin-top: 30px;
     }
     
     #section3 .leftside
