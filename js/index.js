@@ -113,6 +113,17 @@ $('#fullpage').fullpage({
                        // $('#section1 h1').fadeTo(1000, 1);
                         
                         //$('#section1 p').fadeTo(1200, 1);
+						$("#section1 h2").hover(function(){
+							$("#section1 #over").fadeOut();
+							},function(){
+							$("#section1 #over").fadeIn();
+							}); 
+						
+						/*$('#section0 #header').delay(2500).animate({
+                            marginTop: '0px',
+                            opacity: 1
+                        }, 500);*/
+						
 					}
 					
 					if(index == 3)
