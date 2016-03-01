@@ -47,6 +47,7 @@
     - prettyloaded
     - nav styling
     - logo
+    - code CONTACT ME
 
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -702,6 +703,37 @@
             margin-bottom: 0px;
         }
     }
+        
+    @media screen and (max-width: 600px)
+{
+    #section0 #header
+    {
+        transform: translate(-52.5%, -50%);
+    }
+}
+
+@media screen and (max-width: 450px)
+{
+    body
+    {
+        font-size: 13px;
+    }
+    
+}
+
+@media screen and (max-width: 375px)
+{
+    body
+    {
+        font-size: 11px;
+    }
+    
+    #section0 p
+    {
+        margin-top: 0px;
+    }
+    
+}
 
 /*--------------------------------------------------------------
         -------------------LIGHTCASE---------------------
@@ -1380,8 +1412,8 @@
 	</div>
 	<div class="section" id="section1"> 
 		<div id="over"></div>
-		<a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><h2 id="wDesign">&lt;webdesign></h2></a>
-        <a href="img/work/TSMTLIFT.jpg" data-rel="lightcase:work"><h2 id="gDesign">*EVENT<br>*GRAPHICS</h2></a>
+		<a href="img/work/LiftBLUESQUAD.jpg"  id="wDesign" data-rel="lightcase:work"><h2>&lt;webdesign></h2><p>My web design portfolio is growing<br>from the ground up every day.</p></a>
+        <a href="img/work/TSMTLIFT.jpg" id="gDesign" data-rel="lightcase:work"><h2>*eventgraphics*</h2><p>I've been creating event graphics for<br>5+ years using only Microsoft Paint. JK</p></a>
 		<!--<div id="rightwork">
             <a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/><h4>Lift Graphic</h4></a>
             <a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/><h4>Lift Graphic</h4></a>

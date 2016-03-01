@@ -261,23 +261,33 @@ svg
 {
 	top: 25%;
 	left: 8%;
-	font-weight: 900;
+    position: absolute;
+}
+
+#section1 #wDesign h2,
+#section1 #gDesign h2
+{
+    font-weight: 900;
 	font-size: 4em;
+}
+
+#section1 #wDesign p,
+#section1 #gDesign p
+{
+    padding-top: 10px;
+    font-size: 1.5em;
 }
 
 #section1 #gDesign
 {
 	bottom: 15%;
 	right: 8%;
-	font-weight: 900;
-	font-size: 4em;
-    text-align: right;
+    position: absolute;
 }
 
 #section1 h2
 {
 	filter: none;
-	position: absolute;
 	color: white;
 	//transition: all 1s;
     padding-bottom: 5px;
@@ -345,7 +355,7 @@ svg
 
 //#section1 #
 
-#section1 p
+#section5 p
 {
     -webkit-transform: skewX(10deg);
 	-ms-transform: skewX(10deg);
@@ -829,7 +839,7 @@ svg
 /* Icons ---------------------------------- */
 #name
 {
-	background: 'url(../img/user.png)';
+	background-image: url(../img/user.png);
 	background-size: 30px 30px;
 	background-position: 11px 8px;
 	background-repeat: no-repeat;
@@ -1042,11 +1052,6 @@ input:focus, textarea:focus {
         margin-left: 100px;
     }
     
-    #section1 p
-    {
-        padding-left: 35%;
-        text-align: left;
-    }
 }
 
 @media screen and (min-width: 850px)
@@ -1177,11 +1182,6 @@ input:focus, textarea:focus {
 	{
         transform: translate(-60%, -50%);
     }
-
-	#section1 #leftwork a
-	{
-		width: 280px;
-	}
 }
 
 @media screen and (max-width: 1800px)
@@ -1190,11 +1190,6 @@ input:focus, textarea:focus {
        {
         transform: translate(-58%, -50%);
     }
-	
-	#section1 #leftwork a
-	{
-		width: 250px;
-	}
 }
 
 @media screen and (max-width: 1550px)
@@ -1203,11 +1198,6 @@ input:focus, textarea:focus {
     {
         transform: translate(-57%, -50%);
     }
-	
-	#section1 #leftwork a
-	{
-		width: 200px;
-	}
 }
 
 @media screen and (max-width: 1300px)
@@ -1216,19 +1206,10 @@ input:focus, textarea:focus {
        {
         transform: translate(-56%, -50%);
     }
-	
-	#section1 #leftwork a
-	{
-		width: 175px;
-	}
 }
 
 @media screen and (max-width: 1150px)
 {
-	#section1 #leftwork a
-	{
-		width: 150px;
-	}
 }
 
 @media screen and (max-width: 1000px)
@@ -1256,45 +1237,25 @@ input:focus, textarea:focus {
     
     #section1 #gDesign, #section1 #wDesign
     {
-        font-size: 3.5em;
+        font-size: 1em;
+        margin: auto;
+        position: relative;
+        margin-top: 50px;
+        display: inline-block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    
+    #section1 #wDesign h2, 
+    #section1 #gDesign h2 
+    {
+        font-size: 3em;
+        display: inline-block;
     }
 }
 
-@media screen and (max-width: 600px)
-{
-    #section0 #header
-    {
-        transform: translate(-52.5%, -50%);
-    }
-	
-	#section1 #leftwork a
-	{
-		width: 150px;
-	}
-}
-
-@media screen and (max-width: 450px)
-{
-    body
-    {
-        font-size: 13px;
-    }
-    
-}
-
-@media screen and (max-width: 375px)
-{
-    body
-    {
-        font-size: 11px;
-    }
-    
-    #section0 p
-    {
-        margin-top: 0px;
-    }
-    
-}
 /*----------------------------------------------------------------
     ----------------------- FONT AWESOME ----------------------
 ----------------------------------------------------------------*/
