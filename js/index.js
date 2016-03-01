@@ -114,9 +114,9 @@ $('#fullpage').fullpage({
                         
                         //$('#section1 p').fadeTo(1200, 1);
 						$("#section1 h2").hover(function(){
-							$("#section1 #over").fadeOut();
+							$("#section1 #over").fadeIn('100');
 							},function(){
-							$("#section1 #over").fadeIn();
+							$("#section1 #over").fadeOut('100');
 							}); 
 						
 						/*$('#section0 #header').delay(2500).animate({
