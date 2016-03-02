@@ -44,15 +44,6 @@ else
 function isMobile() {
                     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
                 }
-				if (isMobile()) {
-					 $('#scene').css("transform","none");
-				 }
-				 
-				 if (!isMobile()) {
-					 $('#scene').parallax();                     //For parralax background on home page
-				 }
-
-
 
 if (!isMobile()){
 //) && (window.matchMedia("(min-width: 850px)").matches) {

@@ -398,6 +398,7 @@
         //background-size: cover;
         //background-attachment: fixed;
         display: none;
+        margin-top: -65px;
     }
 
     nav ul {
@@ -1353,12 +1354,12 @@
     <script type="text/javascript">
 function hgsubmit()
 {
-if (/\S+/.test(document.hgmailer.name.value) == false) alert ("Please provide your name.");
-else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) == false) alert ("A valid email address is required.");
- else if (/\S+/.test(document.hgmailer.comment.value) == false) alert ("Your email content is needed.");
+if (/\S+/.test(document.hgmailer.name.value) == false) swal("Noo!", "You forgot to enter your name!", "error");//alert ("Please provide your name.");
+else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) == false) swal("Noo!", "Your email is not valid!", "error");//alert ("A valid email address is required.");
+ else if (/\S+/.test(document.hgmailer.comment.value) == false) swal("Noo!", "You didn't enter any comments!", "error");//alert ("Your email content is needed.");
   else {
        document.hgmailer.submit();
-       alert ('Thank you!\nYour email is sent.');
+       swal("Thank You!", "Your input is greatly appreciated!", "success");//alert ('Thank you!\nYour email is sent.');
        }
 }
 </script> 
@@ -1622,6 +1623,8 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
 			document.getElementsByTagName('head')[0].appendChild(script);
 		</script>-->
 		<script src="js/index.js" defer></script>
+        <script src="js/sweetalert.min.js" defer></script>
+        <link rel='stylesheet' property="stylesheet" href="css/sweetalert.css">
         <link rel='stylesheet' property="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         
 		<!--                           GOOGLE FONTS PRELOADING SCRIPT                          -->
