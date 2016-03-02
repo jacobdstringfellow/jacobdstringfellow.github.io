@@ -286,6 +286,7 @@ else {
 					$('body').addClass('loaded');
 					$(this).dequeue();});
 					$('#section0').find('img').delay(1000).fadeTo(1000, 0); 
+                    $('#section1 a').css("display","inline-block");
                     
                     if(index !== 1){
                          $('#overlay').css('display', 'none');
@@ -293,7 +294,7 @@ else {
 				
 					if(index == 2)
 					{
-						$('#section1 a').css("display","inline-block");
+						
 					}
 					
 					if(index == 3)
