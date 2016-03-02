@@ -1,9 +1,25 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
 
-<!-- 
+	<title>Jacob Stringfellow Portfolio | Web Design </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="author" content="Jacob Daniel Stringfellow" />
+	<meta name="description" content="Portfolio website for Jacob D Stringfellow, Web Designer and Developer from Long Island, New York" />
+	<meta name="keywords"  content="Jacob, Stringfellow, Portfolio, Design, Web, Long Island, New York, LI, NY" />
+	<meta name="Resource-type" content="Document" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+	<link rel="shortcut icon" href="img/meOutline.png" />
+	<!-- 
 	WEB AWARDS
 	http://www.cssdesignawards.com/?id=9293
-
+	
+	https://visualhierarchy.co/shop/product-category/freebies/
+	http://www.designyourway.net/blog/
     http://www.awwwards.com/trendy-web-color-palettes-and-material-design-color-schemes-tools.html
     http://www.yottaa.com/company/blog/application-optimization/why-your-website-is-slow-image-performance/
     http://www.bannersnack.com/blog/13-free-website-and-marketing-grader-tools/
@@ -50,25 +66,6 @@
     - code CONTACT ME
 
 -->
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-	<!--<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:400,500,800'>-->
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-	<title>Jacob Stringfellow Portfolio | Web Design </title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="author" content="Jacob Daniel Stringfellow" />
-	<meta name="description" content="Portfolio website for Jacob D Stringfellow, Web Designer and Developer from Long Island, New York" />
-	<meta name="keywords"  content="Jacob, Stringfellow, Portfolio, Design, Web, Long Island, New York, LI, NY" />
-	<meta name="Resource-type" content="Document" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-
-	<link rel="shortcut icon" href="img/meOutline.png" />
-	<!--<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.min.css" />-->
-	<!--<link rel="stylesheet" type="text/css" href="css/style.css" />-->
     
 	<!--[if lte IE 9]>
 	<link rel="stylesheet" type="text/css" href="css/styleIE.css" />
@@ -1325,6 +1322,15 @@
 /***********************************************************
 *           END -  Lightcase - jQuery Plugin               *
 ***********************************************************/
+
+#section1
+{
+	//white-space: nowrap;
+    background: url('img/work2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+	background-position: center;
+}
 </style>
 	<!--[if IE]>
 		<script type="text/javascript">
@@ -1343,13 +1349,26 @@
         if (raf) raf(cb);
         else window.addEventListener('load', cb);
     </script>
- 
+
+    <script type="text/javascript">
+function hgsubmit()
+{
+if (/\S+/.test(document.hgmailer.name.value) == false) alert ("Please provide your name.");
+else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) == false) alert ("A valid email address is required.");
+ else if (/\S+/.test(document.hgmailer.comment.value) == false) alert ("Your email content is needed.");
+  else {
+       document.hgmailer.submit();
+       alert ('Thank you!\nYour email is sent.');
+       }
+}
+</script> 
+
 </head>
 <body>
 <header>
 
 <div id="topNav" class="menu-section header-top">
-  <h1 class="l-left"><a><img id="logo" src="img/meInvert_Lite.png"/></a></h1>
+  <a class="l-left"><img id="logo" alt="JDS Logo" title="JDS Logo" src="img/meInvert_Lite.png"/></a>
   <div class="menu-toggle">
     <div class="one"></div>
     <div class="two"></div>
@@ -1377,7 +1396,7 @@
 <div id="fullpage">
 	<div class="section" id="section0">
         <div id="loader-wrapper">
-			<div id="loader"></div><img id="logoLoad" src="img/meOutline.png"/>
+			<div id="loader"></div><img id="logoLoad" alt="JDS Logo" title="JDS Logo" src="img/meOutline.png"/>
 			<div class="loader-section section-left"></div>
             <div class="loader-section section-right"></div>
 		</div>
@@ -1410,76 +1429,36 @@
 		<a class="goTo2" href="#"><i class="fa fa-arrow-circle-down"></i></a>
 		
 	</div>
-	<div class="section" id="section1"> 
-		<div id="over"></div>
-		<a href="img/work/LiftBLUESQUAD.jpg"  id="wDesign" data-rel="lightcase:work"><h2>&lt;webdesign></h2><p>My web design portfolio is growing<br>from the ground up every day.</p></a>
-        <a href="img/work/TSMTLIFT.jpg" id="gDesign" data-rel="lightcase:work"><h2>*eventgraphics*</h2><p>I've been creating event graphics for<br>5+ years using only Microsoft Paint. JK</p></a>
-		<!--<div id="rightwork">
-            <a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/><h4>Lift Graphic</h4></a>
-            <a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/><h4>Lift Graphic</h4></a>
-			<a href="img/work/TSMTLIFT.jpg" data-rel="lightcase:work"><img src="img/work/TSMTlift_Thumb.jpg"/><h4>Lift Graphic</h4></a>  
-            <a href="img/work/ManPing14_burgundy.jpg" data-rel="lightcase:work"><img src="img/work/ManPing14_burgundy_Thumb.jpg"/><h4>Lift Graphic</h4></a>
+	<div class="section over" id="section1"> 
+		<div id="deskWork">
+			<div id="over"></div>
+			<a href="img/work/LiftBLUESQUAD.jpg"  id="wDesign" data-rel="lightcase:work"><h2>&lt;webdesign></h2><p>My web design portfolio is growing<br>from the ground up every day.</p></a><br><br>
+			<a href="img/work/TSMTLIFT.jpg" id="gDesign" data-rel="lightcase:work"><h2>*eventgraphics*</h2><p>I've been creating event graphics for<br>5+ years using only Microsoft Paint. JK</p></a>
+		</div>	
+		<div id="mobileWork">
+			<div id="webdesign">
+				<a href="img/work/LiftBLUESQUAD.jpg"  id="wDesign" data-rel="lightcase:work"><h2>&lt;webdesign></h2><p>My web design portfolio is growing<br>from the ground up every day.</p></a>
+			</div>
+			<div id="graphics">
+				<a href="img/work/TSMTLIFT.jpg" id="gDesign" data-rel="lightcase:work"><h2>*eventgraphics*</h2><p>I've been creating event graphics for<br>5+ years using only Microsoft Paint. JK</p></a>
+			</div>
+		</div>
+		<div id="mywork">
+            <a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img alt="Lift Camp Graphic" title="Lift Camp Graphic" src="img/work/LiftBLUESQUAD_Thumb.jpg"/><h4>Lift Graphic</h4></a>
+            <a href="img/work/TSMTLIFT.jpg" data-rel="lightcase:work"><img alt="Takeover Camp Graphic" title="Takeover Camp Graphic" src="img/work/TSMTlift_Thumb.jpg"/><h4>Lift Graphic</h4></a>  
+            <a href="img/work/ManPing14_burgundy.jpg" data-rel="lightcase:work"><img alt="2014 Camping Graphic" title="2014 Camping Graphic" src="img/work/ManPing14_burgundy_Thumb.jpg"/><h4>Lift Graphic</h4></a>
+			<a href="img/work/BabySitting.jpg" data-rel="lightcase:work"><img alt="Babysitting Graphic" title="Babysitting Graphic" src="img/work/BabySitting_Thumb.jpg"/></a>
+			<a href="img/work/QR_scavengerhunt.jpg" data-rel="lightcase:work"><img alt="Scavenger Hunt Graphic" title="Scavenger Hunt Graphic" src="img/work/QR_scavengerhuntThumb.jpg"/></a>
+			<a href="img/work/ManPing15wide.jpg" data-rel="lightcase:work"><img alt="2015 Camping Graphic" title="2015 Camping Graphic" src="img/work/Manping15_Thumb.jpg"/></a>
+			<a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"><img alt="Recharge Teen Graphic" title="Recharge Teen Graphic" src="img/work/RechargeReturns_Thumb.jpg"/></a>
+            <a href="img/work/MOVE.jpg" data-rel="lightcase:work"><img alt="MOVE Teen Graphic" title="MOVE Teen Graphic" src="img/work/MOVE_Thumb.jpg"/></a>
+            <a href="img/work/carwash.jpg" data-rel="lightcase:work"><img alt="Car Wash Graphic" title="Car Wash Graphic" src="img/work/carwash_Thumb.jpg"/></a>
+            <a href="img/work/TSMN_p.jpg" data-rel="lightcase:work"><img alt="TSM Night Graphic" title="TSM Night Graphic" src="img/work/TSMN_Thumb.jpg"/></a>
+			<a href="img/work/scavengerChamps.jpg" data-rel="lightcase:work"><img alt="Scavenger Champs Graphic" title="Scavenger Champs Graphic" src="img/work/scavengerChampsThumb.jpg"/></a>
+            <a href="img/work/scavengerSUSHI.jpg" data-rel="lightcase:work"><img alt="Scavenger 2nd Place Graphic" title="Scavenger 2nd Place Graphic" src="img/work/scavengerSUSHI_Thumb.jpg"/></a>
+            <a href="img/work/RechargeSplash.jpg" data-rel="lightcase:work"><img alt="Recharge Water Graphic" title="Recharge Water Graphic" src="img/work/RechargeSplash_Thumb.jpg"/></a>
+            <a href="img/work/Insomnia.jpg" data-rel="lightcase:work"><img alt="Insomnia Event Graphic" title="Insomnia Event Graphic" src="img/work/Insomnia_Thumb.jpg"/></a>
         </div>
-		<div id="leftwork">
-				<a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/></a>
-				<a href="img/work/TSMTLIFT.jpg" data-rel="lightcase:work"><img src="img/work/TSMTlift_Thumb.jpg"/></a>  
-				<a href="img/work/ManPing14_burgundy.jpg" data-rel="lightcase:work"><img src="img/work/ManPing14_burgundy_Thumb.jpg"/></a>
-				<a href="img/work/BabySitting.jpg" data-rel="lightcase:work"><img src="img/work/BabySitting_Thumb.jpg"/></a>
-				<a href="img/work/QR_scavengerhunt.jpg" data-rel="lightcase:work"><img src="img/work/QR_scavengerhuntThumb.jpg"/></a>
-				<a href="img/work/ManPing15wide.jpg" data-rel="lightcase:work"><img src="img/work/Manping15_Thumb.jpg"/></a>
-				<a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"><img src="img/work/RechargeReturns_Thumb.jpg"/></a>
-				<a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/></a>
-				<a href="img/work/TSMTLIFT.jpg" data-rel="lightcase:work"><img src="img/work/TSMTlift_Thumb.jpg"/></a>  
-		</div>-->
-
-		<!--
-        <div class="lefty">
-            <h1>WORK</h1>
-            <p><strong>WORK</strong> is always in<br> <strong>progress</strong>.<br> 
-            <strong>More</strong> work is yet to come.<br>
-            <strong>Please</strong> see the<br>
-            <strong>Contact</strong> page for<br>
-            <strong>More</strong> information.</p>
-        </div>
-        <div class="righty">
-          <div class="row first">
-            <a href="img/work/MOVE.jpg" data-rel="lightcase:work"><img src="img/work/MOVE_Thumb.jpg"/></a>
-            <a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"><img src="img/work/RechargeReturns_Thumb.jpg"/></a>
-            <a href="img/work/ManPing15wide.jpg" data-rel="lightcase:work"><img src="img/work/ManPing15_Thumb.jpg"/></a>
-            <a href="img/work/carwash.jpg" data-rel="lightcase:work"><img src="img/work/carwash_Thumb.jpg"/></a>
-            <a href="img/work/TSMN_p.jpg" data-rel="lightcase:work"><img src="img/work/TSMN_Thumb.jpg"/></a>
-			<a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/></a>
-            <a href="img/work/scavengerChamps.jpg" data-rel="lightcase:work"><img src="img/work/scavengerChampsThumb.jpg"/></a>
-          </div>--><!--
-          <div class="row">
-            <a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/></a>
-            <a href="img/work/TSMTLIFT.jpg" data-rel="lightcase:work"><img src="img/work/TSMTlift_Thumb.jpg"/></a>  
-            <a href="img/work/ManPing14_burgundy.jpg" data-rel="lightcase:work"><img src="img/work/ManPing14_burgundy_Thumb.jpg"/></a>
-            <a href="img/work/BabySitting.jpg" data-rel="lightcase:work"><img src="img/work/BabySitting_Thumb.jpg"/></a>
-            <a href="img/work/QR_scavengerhunt.jpg" data-rel="lightcase:work"><img src="img/work/QR_scavengerhuntThumb.jpg"/></a>
-            <a href="img/work/ManPing15wide.jpg" data-rel="lightcase:work"><img src="img/work/Manping15_Thumb.jpg"/></a>
-            <a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"><img src="img/work/RechargeReturns_Thumb.jpg"/></a>
-          </div>
-          <div class="row">
-            <a href="img/work/scavengerSUSHI.jpg" data-rel="lightcase:work"><img src="img/work/scavengerSUSHI_Thumb.jpg"/></a>
-            <a href="img/work/RechargeSplash.jpg" data-rel="lightcase:work"><img src="img/work/RechargeSplash_Thumb.jpg"/></a>
-            <a href="img/work/Insomnia.jpg" data-rel="lightcase:work"><img src="img/work/Insomnia_Thumb.jpg"/></a>
-            <a href="img/work/carwash.jpg" data-rel="lightcase:work"><img src="img/work/carwash_Thumb.jpg"/></a>
-			<a href="img/work/ManPing14_burgundy.jpg" data-rel="lightcase:work"><img src="img/work/ManPing14_burgundy_Thumb.jpg"/></a>
-            <a href="img/work/MOVE.jpg" data-rel="lightcase:work"><img src="img/work/MOVE_Thumb.jpg"/></a>
-            <a href="img/work/RechargeSplash.jpg" data-rel="lightcase:work"><img src="img/work/RechargeSplash_Thumb.jpg"/></a>
-		  </div>
-		  <div class="row first">
-            <a href="img/work/MOVE.jpg" data-rel="lightcase:work"><img src="img/work/MOVE_Thumb.jpg"/></a>
-            <a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"><img src="img/work/RechargeReturns_Thumb.jpg"/></a>
-            <a href="img/work/ManPing15wide.jpg" data-rel="lightcase:work"><img src="img/work/ManPing15_Thumb.jpg"/></a>
-            <a href="img/work/carwash.jpg" data-rel="lightcase:work"><img src="img/work/carwash_Thumb.jpg"/></a>
-            <a href="img/work/TSMN_p.jpg" data-rel="lightcase:work"><img src="img/work/TSMN_Thumb.jpg"/></a>
-			<a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work"><img src="img/work/LiftBLUESQUAD_Thumb.jpg"/></a>
-            <a href="img/work/scavengerChamps.jpg" data-rel="lightcase:work"><img src="img/work/scavengerChampsThumb.jpg"/></a>
-          </div>
-	
-        </div>-->
 	</div>
 	<div class="section" id="section2">
 		
@@ -1488,7 +1467,7 @@
            <!-------------------------------------------------->
            <div id="mobileDesign">
                 <div>
-                <img src="img/crownR.png" alt="Crown Design">
+                <img src="img/crownR.png" alt="Crown Design" title="Crown Icon">
                 <h2>Design</h2>
                 <h4>HTML & CSS</h4>
                 <div class="bar"><div class="html"></div></div>
@@ -1501,7 +1480,7 @@
                 </div>
             </div>
             <div id="mobileCode">
-                <img src="img/codeIconR.png" alt="Code Development">
+                <img src="img/codeIconR.png" alt="Code Development" title="Code Icon">
                 <h2>Development</h2>
                 <h4>PHP</h4>
                 <div class="bar"><div class="php"></div></div>
@@ -1525,7 +1504,7 @@
                     <i id="infoL" class="fa fa-info-circle"></i>
 					<div id="leftInfo">
 						<div id="leftContainer">
-							<img src="img/codeIconR.png" alt="Code Development">
+							<img src="img/codeIconR.png" alt="Code Development" title="Code Icon">
                             <h4>PHP</h4>
 							<div class="bar"><div class="php"></div></div>
                             <h4>MySQL</h4>
@@ -1542,7 +1521,7 @@
 					<div id="rightInfo">
 						<div id="rightContainer">
 							<div>
-							<img src="img/crownR.png" alt="Crown Design">
+							<img src="img/crownR.png" alt="Crown Design" title="Crown Icon">
                             <h4>HTML & CSS</h4>
 							<div class="bar"><div class="html"></div></div>
                             <h4>JavaScript</h4>
@@ -1579,21 +1558,24 @@
 				<div id="form-main">
 					<h2>Contact Me</h2>
 					<div id="form-div">
-					<form class="form" id="form1">
+					<form action="http://www.jacobstringfellow.com/cgi-sys/formmail.pl" method="post" class="form" id="form1" name="hgmailer">
+                                          <input type="hidden" name="recipient" value="stringfellow@jacobstringfellow.com">
+                                          <input type="hidden" name="subject" value="FormMail E-Mail">
 					  <p class="name">
-						<input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name"/>
+						<input name="name" type="text" size="30" value="" placeholder="Name" id="name" class="feedback-input"/>
 					  </p>
 					  
-					  <p class="email">
-						<input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+					   <p class="email">
+						<input name="email" type="text" size="30" id="email" value="" placeholder="Email" class="feedback-input"/>
 					  </p>
 					  
 					  <p class="text">
-						<textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+						<textarea name="comment" id="comment" class="feedback-input" placeholder="Comment"></textarea>
 					  </p>
 					  
 					  <div class="submit">
-						<input type="submit" value="SEND" id="button-blue"/>
+						<input type="button" value="SEND" id="button-blue" onclick="hgsubmit();">
+                                                <input type="hidden" name="redirect" value="http://jacobstringfellow.com">
 						<div class="ease"></div>
 					  </div>
 					</form>
@@ -1640,9 +1622,11 @@
 			document.getElementsByTagName('head')[0].appendChild(script);
 		</script>-->
 		<script src="js/index.js" defer></script>
-		<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/1.1.1/jquery.parallax.min.js' defer></script>-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <script type="text/javascript">
+        <link rel='stylesheet' property="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        
+		<!--                           GOOGLE FONTS PRELOADING SCRIPT                          -->
+		
+		<script type="text/javascript">
           WebFontConfig = {
             google: { families: [ 'Raleway:500,700,900:latin' ] }
           };
@@ -1655,6 +1639,19 @@
             s.parentNode.insertBefore(wf, s);
           })(); 
         </script>
+		
+		<!--                           GOOGLE ANALYTICS FOR WEBSITE                            -->
+		
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-74515346-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
 
 </body>
 </html>

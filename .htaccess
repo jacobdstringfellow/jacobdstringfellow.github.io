@@ -1,5 +1,8 @@
 DirectoryIndex index.html
 
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.jacobstringfellow.com [NC]
+RewriteRule ^(.*)$ http://jacobstringfellow.com/$1 [L,R=301,NC]
 
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>

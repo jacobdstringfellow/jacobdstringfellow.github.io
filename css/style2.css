@@ -245,16 +245,20 @@ svg
 	background-position: center;
 }
 
+#section1 #mywork
+{
+	display: none;
+}
+
 #section1 #over
 {
 	width: 100%;
 	height: 100%;
-	filter: blur(5px);
 	background: url('../img/work2blur.jpg');
     background-size: cover;
     background-attachment: fixed;
 	background-position: center;
-    display: none;
+    //display: none;
 }
 
 #section1 #wDesign
@@ -262,6 +266,7 @@ svg
 	top: 25%;
 	left: 8%;
     position: absolute;
+	display: none;
 }
 
 #section1 #wDesign h2,
@@ -269,6 +274,7 @@ svg
 {
     font-weight: 900;
 	font-size: 4em;
+	display: inline-block;
 }
 
 #section1 #wDesign p,
@@ -283,6 +289,18 @@ svg
 	bottom: 15%;
 	right: 8%;
     position: absolute;
+	display: none;
+}
+
+#section1 #deskWork
+{
+	display: block;
+	height: 100%;
+}
+	
+#section1 #mobileWork
+{
+	display: none;
 }
 
 #section1 h2
@@ -292,12 +310,6 @@ svg
 	//transition: all 1s;
     padding-bottom: 5px;
     border-bottom: white solid 10px;
-}
-
-#section1 #gDesign:hover,
-#section1 #wDesign:hover
-{
-    color: rgba(255,255,255,0.9);
 }
 
 #section1 #rightwork
@@ -522,8 +534,6 @@ svg
 	padding-left: 3%;
 	padding-right: 3%;
 	overflow: hidden;
-    margin-top: 60px;
-    opacity: 0;
 }
 
 #section2 #mobileDesign
@@ -982,12 +992,12 @@ input:focus, textarea:focus {
 
 #section3 h4
 {
-	font-size: 1.3em;
+	font-size: 1.4em;
 }
 
 #section3 p
 {
-	font-size: 1.2em;
+	font-size: 1.3em;
 	color: #EEEEEE;
 	text-transform: none;
 	font-weight: 300;
@@ -1230,18 +1240,18 @@ input:focus, textarea:focus {
 
 @media screen and (max-width: 850px)
 {
-	#section1 #leftwork a
+
+	#section1
 	{
-		width: 115px;
+		background: none;
 	}
-    
+	
     #section1 #gDesign, #section1 #wDesign
-    {
+       { 
         font-size: 1em;
         margin: auto;
         position: relative;
         margin-top: 50px;
-        display: inline-block;
         top: 0;
         right: 0;
         bottom: 0;
@@ -1252,9 +1262,55 @@ input:focus, textarea:focus {
     #section1 #gDesign h2 
     {
         font-size: 3em;
-        display: inline-block;
+		color: #ffff33;
+		border-bottom: 10px solid #ffff33;
     }
+	
+	#section1 #over
+	{
+		visibility: hidden;
+	}
+	
+	#section1 #mobileWork
+	{
+		display: block;
+		height: 100%;
+	}
+	
+	#section1 #deskWork
+	{
+		display: none;
+	}
+	
+	#section1 #mobileWork p
+	{
+		color: #EEEEEE;
+	}
+	
+	#section1 #webdesign
+	{
+		background: url('../img/sky.jpg');
+		background-size: cover;
+		//background-attachment: fixed;
+		background-position: center;
+		height: 50%;
+	}
+	
+	#section1 #graphics
+	{
+		background: url('../img/city.jpg');
+		background-size: cover;
+		//background-attachment: fixed;
+		background-position: center;
+		height: 50%;
+	}
+	
+	#section1 #gDesign, #section1 #wDesign
+	{
+		top: 30%;
+	}
 }
+
 
 /*----------------------------------------------------------------
     ----------------------- FONT AWESOME ----------------------
