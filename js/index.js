@@ -46,6 +46,7 @@ function isMobile() {
                 }
 
 if (!isMobile()){
+    alert('desktop');
 //) && (window.matchMedia("(min-width: 850px)").matches) {
 					/* the view port is at least 850 pixels wide */
 $('#fullpage').fullpage({
@@ -269,6 +270,7 @@ $('#fullpage').fullpage({
 			-------------------------------------------------------------------
 			-----------------------------------------------------------------*/
 else {
+    alert('mobile');
 					/* the view port is less than 768 pixels wide */
 	$('#fullpage').fullpage({
                 sectionsColor: ['#212121', '#212121', '#C9C9C9', '#293241', '#ccddff'],
