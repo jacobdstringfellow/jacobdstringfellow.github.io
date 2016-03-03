@@ -46,7 +46,7 @@ function isMobile() {
                 }
 
 if (!isMobile()){
-    alert('desktop');
+
 //) && (window.matchMedia("(min-width: 850px)").matches) {
 					/* the view port is at least 850 pixels wide */
 $('#fullpage').fullpage({
@@ -64,6 +64,10 @@ $('#fullpage').fullpage({
 					$('body').addClass('loaded');
 					$(this).dequeue();});
 					$('#section0 img').delay(1000).fadeTo(1000, 0); 
+                    //$('#section1').css('background','url("img/work2blur.jpg")'); 
+                    //$('#section1').css('background-size','cover'); 
+                    //$('#section1').css('background-attachment','fixed'); 
+                    //$('#section1').css('background-position','center');
 
                     $('#section0 #header').delay(2500).animate({
                             marginTop: '0px',
@@ -88,17 +92,17 @@ $('#fullpage').fullpage({
 					
 					if(index == 2)
 					{	
-
+                        
 						$("#section1 a").hover(
 						  function(){
 							if ( $(window).width() > 850) {
-								$("#section1 #over").fadeIn('100');
+								$("#section1 #over").fadeIn();
 							}
 						  },function(){
 						   if ( $(window).width() > 850) {
-							$("#section1 #over").fadeOut('100');
+							$("#section1 #over").fadeOut();
 						}}
-						); 
+						);
 					}
 					
 					if(index == 3)
@@ -270,7 +274,7 @@ $('#fullpage').fullpage({
 			-------------------------------------------------------------------
 			-----------------------------------------------------------------*/
 else {
-    alert('mobile');
+    
 					/* the view port is less than 768 pixels wide */
 	$('#fullpage').fullpage({
                 sectionsColor: ['#212121', '#212121', '#C9C9C9', '#293241', '#ccddff'],

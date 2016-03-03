@@ -239,10 +239,21 @@ svg
 #section1
 {
 	//white-space: nowrap;
-    background: url('../img/work2.jpg');
-    background-size: cover;
+     background-size: cover;
     background-attachment: fixed;
 	background-position: center;
+    
+}
+
+#section1 a
+{
+    opacity: 0.75;
+    transition: all .5s;
+}
+
+#section1 a:hover
+{
+    opacity:1;
 }
 
 #section1 #mywork
@@ -256,9 +267,8 @@ svg
 	height: 100%;
 	background: url('../img/work2blur.jpg');
     background-size: cover;
-    background-attachment: fixed;
 	background-position: center;
-    //display: none;
+    display: none;
 }
 
 #section1 #wDesign
@@ -296,6 +306,10 @@ svg
 {
 	display: block;
 	height: 100%;
+    width: 100%;
+    background: url('../img/work2.jpg');
+    background-size: cover;
+	background-position: center;
 }
 	
 #section1 #mobileWork
@@ -363,21 +377,6 @@ svg
 {
 	margin-bottom: 0px;
 	width: 100%;
-}
-
-//#section1 #
-
-#section5 p
-{
-    -webkit-transform: skewX(10deg);
-	-ms-transform: skewX(10deg);
-	transform: skewX(10deg);
-    padding-left: 235px;
-    color: #B5B5B7;
-    font-size: 1.7em;
-    text-align: center;
-    opacity: 0;
-   // margin-top: 30px;
 }
 
 #section1 h1
@@ -804,8 +803,9 @@ svg
 }
 
 #form-div {
-	width: 70%;
+	width: 80%;
 	margin: auto;
+    max-width: 600px;
 }
 
 #form-div p
@@ -957,6 +957,15 @@ input:focus, textarea:focus {
 	vertical-align: middle;
     margin-top: -60px;
     opacity: 0;
+    width: 80%;
+    max-width: 600px;
+}
+
+#section3 #me
+{
+    width: 80%; 
+    max-width: 600px; 
+    margin: auto;
 }
 
 #infoL, #infoR
@@ -1241,11 +1250,6 @@ input:focus, textarea:focus {
 @media screen and (max-width: 850px)
 {
 
-	#section1
-	{
-		background: none;
-	}
-	
     #section1 #gDesign, #section1 #wDesign
        { 
         font-size: 1em;
