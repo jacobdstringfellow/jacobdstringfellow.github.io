@@ -11,12 +11,25 @@
 	<meta name="keywords"  content="Jacob, Stringfellow, Portfolio, Design, Web, Long Island, New York, LI, NY" />
 	<meta name="Resource-type" content="Document" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+    <meta name="msvalidate.01" content="C685A9E50F268B0B7A4AF9B03FA7BAE5" />
 
 	<link rel="shortcut icon" href="img/meOutline.png" />
 	<!-- 
+	
+	(DONE) css sPRITES
+	(DONE) COMBINE CSS AND JS
+	(DONE) STYLE ALERTS
+    (DONE) SWAP SKILLS AND WORK
+    (DONE) STYLE FOOTER
+    (HOLD OFF) NAV AGAIN
+    COLOR SCHEME
+	LOGO REDESIGN
+	MINIFY JS AND CSS
+	LINKEDiN
+	
 	WEB AWARDS
 	http://www.cssdesignawards.com/?id=9293
+	http://www.webdesignerdepot.com/2016/03/the-best-new-portfolio-sites-march-2016/
 	
 	https://visualhierarchy.co/shop/product-category/freebies/
 	http://www.designyourway.net/blog/
@@ -31,7 +44,12 @@
     https://varvy.com/mobile/conditional-javascript.html
 
 	Check
+	unsplash.com
 	check out Bower, Modernizr, PrefixFree
+	http://tympanus.net/Tutorials/FullscreenSlitSlider/
+	http://johnpolacek.github.io/scrollorama/
+	Scroll Magic
+	http://www.webdesignerdepot.com/2016/03/the-best-new-portfolio-sites-march-2016/
 	http://speckyboy.com/2013/07/10/your-page-speed-down-cut-your-pages-loading-time-in-half-with-some-simple-jquery/
 	https://www.smashingmagazine.com/2009/04/15-essential-checks-before-launching-your-website/
 	http://www.my-debugbar.com/wiki/IETester/HomePage   IE TESTER
@@ -72,9 +90,13 @@
 	<![endif]-->
     
 	<style type="text/css">
-     @font-face {
-    font-family: Anurati;
-    src: url("fonts/Anurati-Regular.otf") format("opentype");
+    
+    @font-face {
+      font-family: 'Anurati';
+      src: url("fonts/anurati.eot");
+      src: url("fonts/anurati.eot") format("embedded-opentype"), url("fonts/anurati.woff") format("woff"), url("fonts/anurati.ttf") format("truetype"), url("fonts/Anurati-Regular.otf") format("opentype"), url("fonts/anurati.svg") format("svg");
+      font-weight: normal;
+      font-style: normal;
     }
 	
         
@@ -275,7 +297,7 @@
         margin: 0;
         position: fixed;
         width: 115%;
-        height: 120vh;
+        height: 120%;
         overflow: hidden;
         top: -5%;
         left: -5%;
@@ -308,7 +330,7 @@
     }
 
     .layer2 {
-        background-image: url(img/sky_front_blue.png);
+        background-image: url(img/foreground-db.png);
         background-size: cover;
         background-position: center;
         position: absolute;
@@ -319,7 +341,7 @@
     }
 
     .layer1 {
-        background-image: url(img/sky_back_bluemin.jpg);
+        background-image: url(img/background-db.jpg);
         background-position: center;
         background-size: cover;
         position: absolute;
@@ -329,8 +351,29 @@
         top: -5%;
     }
 
-    @media (max-width:700px) {
+    @media screen and (max-width:850px) 
+    {
+        .layer2 {
+        background-image: url(img/sky_front_blue-mobile.png);
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -5%;
+        top: -5%;
+        }
 
+    .layer1 {
+        background-image: url(img/sky_back_bluemin_mobile.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -5%;
+        top: -5%;
+        }
 
 
     }
@@ -596,7 +639,6 @@
     #section2,
     #section3{
         background-size: cover;
-        background-attachment: fixed;
         overflow: hidden;
     }
 
@@ -630,9 +672,6 @@
     /* Defining each section background and styles
     * --------------------------------------- */
     #section0{
-        background: url('../img/skyline_darkSmin.jpg');
-        background-size: cover;
-        background-attachment: fixed;
     }
 
     #section0 h1
@@ -654,6 +693,7 @@
         left: 50%;
         z-index: 2;
         transform: translate(-52%, -50%);
+        -webkit-transform: translate(-52%, -50%);
         padding-left: 2%;
         padding-right: 1.2%;
         padding-top: 0.5%;
@@ -671,14 +711,44 @@
         letter-spacing: .35em;
     }
 
+	#section0 #leftSlant,
+	#section0 #rightSlant
+	{
+		background: rgba(242,182,50,0.9);
+		width: 60.0018%;
+		height: 200px;
+		position: absolute;
+		bottom: -160px;
+	}
+	
+	#section0 #leftSlant
+	{
+		-webkit-transform: skewY(-7deg);
+		-moz-transform: skewY(-7deg);
+		-ms-transform: skewY(-7deg);
+		-o-transform: skewY(-7deg);
+		transform: skewY(-7deg);
+		left: -10%;
+	}
+	
+	#section0 #rightSlant
+	{
+		-webkit-transform: skewY(7deg);
+		-moz-transform: skewY(7deg);
+		-ms-transform: skewY(7deg);
+		-o-transform: skewY(7deg);
+		transform: skewY(7deg);
+		right: -10%;
+	}
+	
     #section0 i
     {
         font-size: 50px;
-        color: rgba(255,255,255,0.85);
+        color: #252839;
         transition: all .5s;
         position: absolute;
         z-index: 10;
-        bottom: 5%;
+        bottom: 3%;
         left: 0;
         right: 0;
         cursor: pointer;
@@ -688,7 +758,8 @@
 
     #section0 i:hover
     {
-        color: #EE6C4D;
+        color: #252839;
+		opacity: 1;
     }
         
     @media screen and (max-width: 850px)
@@ -1322,14 +1393,8 @@
 *           END -  Lightcase - jQuery Plugin               *
 ***********************************************************/
 
-/*#section1
-{
-    background: url('img/work2.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-	background-position: center;
-}*/
 </style>
+
 	<!--[if IE]>
 		<script type="text/javascript">
 			 var console = { log: function() {} };
@@ -1366,7 +1431,7 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
 <header>
 
 <div id="topNav" class="menu-section header-top">
-  <a class="l-left"><img id="logo" alt="JDS Logo" title="JDS Logo" src="img/meInvert_Lite.png"/></a>
+  <a class="l-left"><img id="logo" alt="JDS Logo" src="img/meInvert_Lite.png"/></a>
   <div class="menu-toggle">
     <div class="one"></div>
     <div class="two"></div>
@@ -1378,10 +1443,10 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
         <a class="menuItem goTo1" href="#1stPage" title="First Section"><h4>HELLO&nbsp;&nbsp;<i class="fa fa-hand-paper-o fa-spin"></i></h4></a>
       </li>
       <li data-menuanchor="2ndPage">
-        <a class="menuItem goTo2" href="#2ndPage" title="Second Section"><h4>WORK&nbsp;&nbsp;<i class="fa fa-desktop"></i></h4></a>
+        <a class="menuItem goTo2" href="#2ndPage" title="Second Section"><h4>SKILLS&nbsp;&nbsp;<i class="fa fa-keyboard-o"></i></h4></a>
       </li>
       <li data-menuanchor="3rdPage">
-        <a id="moveTo" class="menuItem goTo3" href="#3rdPage" title="Second Section"><h4>SKILLS&nbsp;&nbsp;<i class="fa fa-keyboard-o"></i></h4></a>
+        <a id="moveTo" class="menuItem goTo3" href="#3rdPage" title="Second Section"><h4>WORK&nbsp;&nbsp;<i class="fa fa-desktop"></i></h4></a>
       </li>
       <li data-menuanchor="4thPage">
         <a class="menuItem goTo4" href="#4thPage" title="Fourth Section"><h4>CONTACT&nbsp;&nbsp;<i class="fa fa-file-text-o"></i></h4></a>
@@ -1423,40 +1488,56 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
             STRINGFELLOW<br>
             </p>
         </div>-->
-            
+        <div id="leftSlant">
+		</div>
+		<div id="rightSlant">
+		</div>
+		
 		<a class="goTo2" href="#"><i class="fa fa-arrow-circle-down"></i></a>
 		
 	</div>
 	<div class="section over" id="section1"> 
 		<div id="deskWork">
-			<div id="over"></div>
-			<a href="img/work/LiftBLUESQUAD.jpg"  id="wDesign" data-rel="lightcase:work"><h2>&lt;webdesign></h2><p>My web design portfolio is growing<br>from the ground up every day.</p></a><br><br>
-			<a href="img/work/TSMTLIFT.jpg" id="gDesign" data-rel="lightcase:work"><h2>*eventgraphics*</h2><p>I've been creating event graphics for<br>5+ years using only Microsoft Paint. JK</p></a>
+			<div id="diag1">
+			 <a href="img/work/ka-main.png" id="wDesign" data-rel="lightcasedesign:design"><h5>VIEW MY</h5><h2>&lt;webdesign></h2><p>My portfolio is best displayed as this site<br>itself, however click for screenshots<br>of my earlier work.</p></a><br><br>
+            </div>
+            <div id="diag2">
+			 <a href="img/work/TSMTLIFT.jpg" id="gDesign" data-rel="lightcasework:work"><h5>VIEW MY</h5><h2>*eventgraphics*</h2><p>I've been creating event graphics for 5+ years<br>using only Microsoft Paint and just maybe<br>some Adobe Photoshop.</p></a>
+            </div>
 		</div>	
-		<div id="mobileWork">
+		<div id="mywork"> 
+            <a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcasework:work"></a>
+            <a href="img/work/ManPing15wide.jpg" data-rel="lightcasework:work"></a>
+            <a href="img/work/carwash.jpg" data-rel="lightcasework:work"></a>
+            <a href="img/work/TSMN_p.jpg" data-rel="lightcasework:work"></a>
+            <a href="img/work/Insomnia.jpg" data-rel="lightcasework:work"></a>
+            <a href="img/work/MOVE.jpg" data-rel="lightcasework:work"></a>
+            <a href="img/work/BabySitting.jpg" data-rel="lightcasework:work"></a>
+            <a href="img/work/RechargeSplash.jpg" data-rel="lightcasework:work"></a>
+            <a href="img/work/ManPing14_burgundy.jpg" data-rel="lightcasework:work"></a>
+            <a href="img/work/RechargeReturns.jpg" data-rel="lightcasework:work"></a>
+			<a href="img/work/QR_scavengerhunt.jpg" data-rel="lightcasework:work"></a>
+			<a href="img/work/scavengerChamps.jpg" data-rel="lightcasework:work"></a>
+            <a href="img/work/scavengerSUSHI.jpg" data-rel="lightcasework:work"></a>
+            
+            
+            <a href="img/work/ka-mid.png" data-rel="lightcasedesign:design"></a>
+            <a href="img/work/ka-sites.png" data-rel="lightcasedesign:design"></a>
+            <a href="img/work/ka-contact.png" data-rel="lightcasedesign:design"></a>
+            <a href="img/work/tsm-main.png" data-rel="lightcasedesign:design"></a>
+            <a href="img/work/tsm-footer.png" data-rel="lightcasedesign:design"></a>
+            <a href="img/work/NBAmain.png" data-rel="lightcasedesign:design"></a>
+            <a href="img/work/nba.png" data-rel="lightcasedesign:design"></a>
+           
+        </div>
+        <div id="mobileWork">
 			<div id="webdesign">
-				<a href="img/work/LiftBLUESQUAD.jpg"  id="wDesign" data-rel="lightcase:work"><h2>&lt;webdesign></h2><p>My web design portfolio is growing<br>from the ground up every day.</p></a>
+				<a href="img/work/ka-main.png" id="wDesign" data-rel="lightcasedesign:design"><h2>&lt;webdesign></h2><p>My web design portfolio is growing<br>from the ground up every day.</p></a>
 			</div>
 			<div id="graphics">
-				<a href="img/work/TSMTLIFT.jpg" id="gDesign" data-rel="lightcase:work"><h2>*eventgraphics*</h2><p>I've been creating event graphics for<br>5+ years using only Microsoft Paint. JK</p></a>
+				<a href="img/work/LiftBLUESQUAD.jpg"  id="gDesign" data-rel="lightcasework:work"><h2>*eventgraphics*</h2><p>I've been creating event graphics for<br>5+ years using only Microsoft Paint. JK</p></a>
 			</div>
 		</div>
-		<div id="mywork">
-            <a href="img/work/LiftBLUESQUAD.jpg" data-rel="lightcase:work">></a>
-            <a href="img/work/TSMTLIFT.jpg" data-rel="lightcase:work"></a>  
-            <a href="img/work/ManPing14_burgundy.jpg" data-rel="lightcase:work"></a>
-			<a href="img/work/BabySitting.jpg" data-rel="lightcase:work"></a>
-			<a href="img/work/QR_scavengerhunt.jpg" data-rel="lightcase:work"></a>
-			<a href="img/work/ManPing15wide.jpg" data-rel="lightcase:work"></a>
-			<a href="img/work/RechargeReturns.jpg" data-rel="lightcase:work"></a>
-            <a href="img/work/MOVE.jpg" data-rel="lightcase:work"></a>
-            <a href="img/work/carwash.jpg" data-rel="lightcase:work"></a>
-            <a href="img/work/TSMN_p.jpg" data-rel="lightcase:work"></a>
-			<a href="img/work/scavengerChamps.jpg" data-rel="lightcase:work"></a>
-            <a href="img/work/scavengerSUSHI.jpg" data-rel="lightcase:work"></a>
-            <a href="img/work/RechargeSplash.jpg" data-rel="lightcase:work"></a>
-            <a href="img/work/Insomnia.jpg" data-rel="lightcase:work"></a>
-        </div>
 	</div>
 	<div class="section" id="section2">
 		
@@ -1539,7 +1620,7 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
 			  <div id="info">
                   <div id="me">
 				<h2>Jacob Stringfellow</h2>
-				<h4>Web Designer</h4>
+				<!--<h4>Web Designer</h4>-->
 				<p>Web Design is an ever expanding world that I love being a part of. The endless possibilities and uncapped creativity that the web design world allows for is something I do not take for granted.</p>
                 <p>I also have a passion for graphic design, web & database development, video editing and even photography. I would love to help your brand come to life by utilizing any of these skills for your company. Thank you for visiting and please contact me for any inquiries or thoughts.</p>
                 <br>
@@ -1555,6 +1636,7 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
 				<h5>2+ years experience with HTML, jQuery, JavaScript, PHP, and MySQL.</h5>
 				<h5>Intermediate experience with Bootstrap and Dreamweaver.</h5>
 				<h5></h5>-->
+              <div id = "formContainer" style="">
 				<div id="form-main">
 					<h2>Contact Me</h2>
 					<div id="form-div">
@@ -1580,20 +1662,22 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
 					  </div>
 					</form>
 					</div>
-				</div>
+                  </div>
+                </div>
 			</div>
 			<footer>
                 <i class="fa fa-instagram"></i>
                 <i class="fa fa-facebook-square"></i>
-				<p>JS Design</p>
+				<p>JS Design</p><h6> - 2015</h6>
 			</footer>
 
 	</div>
 </div>
-
+        <link rel='stylesheet' property="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         
-        <script type="text/javascript" src="js/fullPage-lightcase-parralax.js" defer></script>
+        <script type="text/javascript" src="js/fullPage-lightcase-parralax-alert.js" defer></script>
 		<script>
 			var domReady = function(callback) {
 				document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
@@ -1612,7 +1696,8 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
 				 }
 			});
 			$(document).ready(function($) {
-                $('a[data-rel^=lightcase]').lightcase();    //Lightcase for work photos
+                $('a[data-rel^=lightcasework]').lightcase();    //Lightcase for work photos
+                $('a[data-rel^=lightcasedesign]').lightcase();    //Lightcase for design photos
 			});
 				 
         </script>
@@ -1622,9 +1707,6 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
 			document.getElementsByTagName('head')[0].appendChild(script);
 		</script>-->
 		<script src="js/index.js" defer></script>
-        <script src="js/sweetalert.min.js" defer></script>
-        <link rel='stylesheet' property="stylesheet" href="css/sweetalert.css">
-        <link rel='stylesheet' property="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         
 		<!--                           GOOGLE FONTS PRELOADING SCRIPT                          -->
 		

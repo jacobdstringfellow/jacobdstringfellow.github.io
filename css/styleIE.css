@@ -7,22 +7,14 @@
     Red:           #fb2d2d;
 */
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700);
-
 #loader
 {
 	display: none;
 }
 
-#section0 h1, #section0 p
+#section0 h1
 {
-	//position: static;
-}
-
-#section0 p
-{
-	font-size: 1.7em;
-	margin-bottom: 100px;
+    padding-top: 2%;
 }
 
 #section2 #topSkills #heading
