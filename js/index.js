@@ -50,7 +50,7 @@ if (!isMobile()){
 //) && (window.matchMedia("(min-width: 850px)").matches) {
 					/* the view port is at least 850 pixels wide */
 $('#fullpage').fullpage({
-                sectionsColor: ['#212121' , '#677077', '#677077', '#677077', '#ccddff'],
+                sectionsColor: ['#212121' , '#677077', '#677077', '#677077', '#B5B5B7'],
                 anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage'],
                 menu: '#menu',
                 scrollingSpeed: 800,

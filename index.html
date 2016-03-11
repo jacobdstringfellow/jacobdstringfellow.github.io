@@ -638,7 +638,6 @@
     #section1,
     #section2,
     #section3{
-        background-size: cover;
         overflow: hidden;
     }
 
@@ -1498,11 +1497,13 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
 	</div>
 	<div class="section over" id="section1"> 
 		<div id="deskWork">
+           <!-- <object id= "cameraSVG" type="image/svg+xml" data="img/camera.svg">Your browser does not support SVG</object>
+            <object id= "designSVG" type="image/svg+xml" data="img/camera.svg">Your browser does not support SVG</object>-->
 			<div id="diag1">
-			 <a href="img/work/ka-main.png" id="wDesign" data-rel="lightcasedesign:design"><h5>VIEW MY</h5><h2>&lt;webdesign></h2><p>My portfolio is best displayed as this site<br>itself, however click for screenshots<br>of my earlier work.</p></a><br><br>
+			 <a href="img/work/ka-main.png" id="wDesign" data-rel="lightcasedesign:design"><h5>VIEW MY</h5><img id = "designSVG" src="img/responsive.png"/><h2>&lt;webdesign></h2><p>My portfolio is best displayed as this site<br>itself, however click for screenshots<br>of my earlier work.</p></a><br><br>
             </div>
             <div id="diag2">
-			 <a href="img/work/TSMTLIFT.jpg" id="gDesign" data-rel="lightcasework:work"><h5>VIEW MY</h5><h2>*eventgraphics*</h2><p>I've been creating event graphics for 5+ years<br>using only Microsoft Paint and just maybe<br>some Adobe Photoshop.</p></a>
+			 <a href="img/work/TSMTLIFT.jpg" id="gDesign" data-rel="lightcasework:work"><h5>VIEW MY</h5><h2>*eventgraphics*</h2><img id = "cameraSVG" src="img/graphic.png"/><p>I've been creating event graphics for 5+ years<br>using only Microsoft Paint and just maybe<br>some Adobe Photoshop.</p></a>
             </div>
 		</div>	
 		<div id="mywork"> 

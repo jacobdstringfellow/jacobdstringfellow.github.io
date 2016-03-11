@@ -236,7 +236,20 @@ svg
 
 /* CSS for Section 1, Page 2, WORK */
 
-#section1 a
+#section1, #section2
+{
+    background: url('../img/geometry-bluegray.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: initial;
+}
+
+#section2
+{
+    background-attachment: fixed;
+}
+
+#section1 #wDesign
 {
 	-webkit-transform: skewY(10deg);
 	-moz-transform: skewY(10deg);
@@ -253,6 +266,33 @@ svg
 #section1 #mywork
 {
 	display: none;
+}
+
+#section1 #cameraSVG, #section1 #designSVG
+{
+    position: absolute;
+    transition: all .5s;
+}
+
+#section1 #cameraSVG
+{
+    right: 110%;
+    bottom: 30%;
+    width: 30%;
+}
+
+#section1 #designSVG
+{
+    top: 5%;
+    left: 115%;
+    z-index: 2;
+    width: 30%;
+}
+
+#section1 #diag1 #wDesign:hover #designSVG,
+#section1 #diag2 #gDesign:hover #cameraSVG
+{
+    width: 32%;
 }
 
 #section1 #over
@@ -460,29 +500,28 @@ svg
 
 #section1 #diag1, #section1 #diag2
 {
+	height: 55%;
+}
+
+#section1 #diag2
+{
 	height: 50%;
 }
 
 #section1 #diag1
 {
-	background: rgba(242,182,50,0.9);
+	background: rgba(242,182,50,1);
 	-webkit-transform: skewY(-10deg);
 	-moz-transform: skewY(-10deg);
 	-ms-transform: skewY(-10deg);
 	-o-transform: skewY(-10deg);
 	transform: skewY(-10deg);
-	height: 50%;
 	border-bottom: thick solid white;
 	margin-top: -10%;
 }
 
 #section1 #diag2
 {
-	-webkit-transform: skewY(-10deg);
-	-moz-transform: skewY(-10deg);
-	-ms-transform: skewY(-10deg);
-	-o-transform: skewY(-10deg);
-	transform: skewY(-10deg);
 	margin-bottom: -10%;
 }
 
