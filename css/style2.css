@@ -49,7 +49,6 @@ svg
 }
 
 .popup {
-  background-color: #424242;
   position: relative;
   margin: auto;
 }
@@ -236,12 +235,16 @@ svg
 
 /* CSS for Section 1, Page 2, WORK */
 
-#section1, #section2
+#section1
 {
-    background: url('../img/geometry-bluegray.jpg');
-    background-repeat: repeat;
+	border-bottom: thick solid #F2b632;
+}
+
+#section1
+{
+    background: url('../img/stepsG.jpg');
     background-attachment: fixed;
-    background-size: initial;
+    background-size: cover;
 }
 
 #section2
@@ -256,6 +259,11 @@ svg
 	-ms-transform: skewY(10deg);
 	-o-transform: skewY(10deg);
 	transform: skewY(10deg);
+}
+
+#section1 a
+{
+	transition: all .5s;
 }
 
 #section1 a:hover
@@ -293,6 +301,12 @@ svg
 #section1 #diag2 #gDesign:hover #cameraSVG
 {
     width: 32%;
+}
+
+#section1 #diag1 a:hover,
+#section1 #diag2 a:hover 
+{
+	font-size: 1.02em;
 }
 
 #section1 #over
@@ -341,6 +355,7 @@ svg
 	right: 8%;
     position: absolute;
 	display: none;
+	margin-bottom: -50px;
 }
 
 #section1 #deskWork
@@ -372,8 +387,8 @@ svg
 
 #section1 #wDesign h2
 {
-    color: #252839;
-    border-bottom: #252839 solid 10px;
+    color: #212121;
+    border-bottom: #212121 solid 10px;
 }
 
 #section1 h5
@@ -518,6 +533,14 @@ svg
 	transform: skewY(-10deg);
 	border-bottom: thick solid white;
 	margin-top: -10%;
+	z-index: 2;
+	opacity: 0.95;
+	
+}
+
+#section1 #diag1:hover
+{
+	opacity: 1;
 }
 
 #section1 #diag2
@@ -610,14 +633,17 @@ svg
 
 #section2
 {
-    //background: url('../img/geometry-blue.jpg');
-    
+    background: url('../img/desktop.jpg');
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 #section2 h1
 {
     border: thick solid #EEEEEE;
 	color: #EEEEEE;
+	border: thick solid #F2B632;
+	color: #F2B632;
     display: inline-block;
 	text-align: center;
     margin: auto;
@@ -694,7 +720,7 @@ svg
 
 #section2 p
 {
-    color: #BDBDBD;
+    color: #FFFFFF;
 	overflow: hidden;
 }
 
@@ -704,9 +730,9 @@ svg
 	height: 45%;
 	bottom: 0px;
 	width: 100%;
-	background: #757575;
     overflow: hidden;
     border-top: thick solid #E0E0E0;
+	min-height: 280px;
 }
 
 #left, #right
@@ -746,13 +772,13 @@ svg
 #left
 {
 	left: 0px;
-	background: url(../img/developer.jpg) no-repeat center; 
+	background: url(../img/developerY.jpg) no-repeat center; 
 }
 
 #right
 {
 	right: 0px;
-    background: url(../img/designer.jpg) no-repeat center;
+    background: url(../img/designerY.jpg) no-repeat center;
 }
 
 #left, #right
@@ -913,7 +939,7 @@ svg
 	font-size: 18px;
 	border-radius: 0;
 	line-height: 22px;
-	background-color: rgba(41,50,65,0.5);
+	background-color: rgba(255,255,255,0.1);
     border: 2px solid #F2B632;
 	padding: 13px 13px 13px 54px;
 	margin-bottom: 10px;
@@ -1065,6 +1091,7 @@ input:focus, textarea:focus {
     left: 0;
     font-size: 1.3em;
     padding: 10px;
+	color: #F2b632;
 }
 
 #infoR

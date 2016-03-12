@@ -50,7 +50,7 @@ if (!isMobile()){
 //) && (window.matchMedia("(min-width: 850px)").matches) {
 					/* the view port is at least 850 pixels wide */
 $('#fullpage').fullpage({
-                sectionsColor: ['#212121' , '#677077', '#677077', '#677077', '#B5B5B7'],
+                sectionsColor: ['#212121' , '#677077', '#677077', '#212121'],
                 anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage'],
                 menu: '#menu',
                 scrollingSpeed: 800,
@@ -64,7 +64,12 @@ $('#fullpage').fullpage({
 					$('body').addClass('loaded');
 					$(this).dequeue();});
 					$('#section0 img').delay(1000).fadeTo(1000, 0); 
-
+					$('#section0 img').delay(1000).fadeTo(1000, 0); 
+					//$('.header-top').delay(3000).fadeIn(1000);
+					$('.header-top').delay(3000).animate({
+                            marginTop: '0px',
+                            opacity: 1
+                        }, 500);
                     $('#section0 #header').delay(2500).animate({
                             marginTop: '0px',
                             opacity: 1
@@ -83,12 +88,16 @@ $('#fullpage').fullpage({
                     }
 
 					if(index == 1){
-						
+						$('.one').css('background','#FFFFFF');
+						$('.two').css('background','#FFFFFF');
+						$('.three').css('background','#FFFFFF');
 					}
 					
                     if(index == 2)
 					{	
-                        
+                        $('.one').css('background','#212121');
+						$('.two').css('background','#212121');
+						$('.three').css('background','#212121');
 						//$("#section1 a").hover(
 						  //function(){
 							//if ( $(window).width() > 850) {
@@ -128,11 +137,17 @@ $('#fullpage').fullpage({
 							$('.bar .java').delay(2000).css('width', '60%');
 							$('.bar .c').delay(2500).css('width', '60%');
 						}
+						
+						$('.one').css('background','#F2b632');
+						$('.two').css('background', '#F2b632');
+						$('.three').css('background','#F2b632');
 					}				
 				
 					if(index == 4)
 					{
-						
+						$('.one').css('background','#FFFFFF');
+						$('.two').css('background','#FFFFFF');
+						$('.three').css('background','#FFFFFF');
 					}
 					
 					$('#moveTo').click(function(e){
@@ -151,13 +166,19 @@ $('#fullpage').fullpage({
                         $('#section0 i').delay(2700).animate({
                                 opacity: 1,
                                 marginBottom: '1px'
-                            }, 500);  
+                            }, 500); 
+						//$('.one').css('background','#FFFFFF');
+						//$('.two').css('background','#FFFFFF');
+						//$('.three').css('background','#FFFFFF');
 					});
 					
 					$('.goTo2').click(function(e){
 						e.preventDefault();
 						$.fn.fullpage.moveTo(2);
 						$('#section1 a').delay(500).fadeIn('1000');
+						//$('.one').css('background','#252839');
+						//$('.two').css('background','#252839');
+						//$('.three').css('background','#252839');
 
 					});
                     
@@ -168,6 +189,9 @@ $('#fullpage').fullpage({
                             marginTop: '-1px',
                             opacity: 1
                         }, 500);
+						//$('.one').css('background','#F2b632');
+						//$('.two').css('background', '#F2b632');
+						//$('.three').css('background','#F2b632');
                         //$('#section2 h1').delay(500).animate({
                         //    marginTop: '-1px',
                         //    opacity: 1
@@ -188,6 +212,9 @@ $('#fullpage').fullpage({
                         if ( $(window).width() < 850) { 
                            $('#section3 #form-main').delay(1500).fadeIn('1000');
                         }
+						//$('.one').css('background','#FFFFFF');
+						//$('.two').css('background','#FFFFFF');
+						//$('.three').css('background','#FFFFFF');
 					});
 				},
                 onLeave: function(index, nextIndex, direction) {
@@ -197,6 +224,9 @@ $('#fullpage').fullpage({
                     if(index == 1 && direction == "down")
 					{
                         $('#section1 a').delay(500).fadeIn('1000');
+						//$('.one').css('background','#252839');
+						//$('.two').css('background','#252839');
+						//$('.three').css('background','#252839');
 					}
                     
 					if(index == 2 && direction == "up")
@@ -208,8 +238,11 @@ $('#fullpage').fullpage({
                         $('#section0 i').delay(2700).animate({
                                 opacity: 1,
                                 marginBottom: '1px'
-                            }, 500);   
-                        }
+                            }, 500); 
+						//$('.one').css('background','#FFFFFF');
+						//$('.two').css('background','#FFFFFF');
+						//$('.three').css('background','#FFFFFF');			
+                    }
 					
                     if(index == 2 && direction == "down")
 					{
@@ -217,15 +250,24 @@ $('#fullpage').fullpage({
                             marginTop: '-1px',
                             opacity: 1
                         }, 500);
+						//$('.one').css('background','#F2b632');
+						//$('.two').css('background', '#F2b632');
+						//$('.three').css('background','#F2b632');
 					}
                     
 					if(index == 3 && direction =='up'){
 						$('#section1 a').delay(500).fadeIn('1000');
+						//$('.one').css('background','#252839');
+						//$('.two').css('background','#252839');
+						//$('.three').css('background','#252839');
 					}
 					
                     if(index == 3 && direction =='down'){
                         $('#section3 #me').delay(500).fadeIn('1000');
                         $('#section3 #form-main').delay(500).fadeIn('1000');
+						//$('.one').css('background','#FFFFFF');
+						//$('.two').css('background','#FFFFFF');
+						//$('.three').css('background','#FFFFFF');
                     }
 					
 					if(index == 4 && direction =='up'){
@@ -233,6 +275,9 @@ $('#fullpage').fullpage({
                             marginTop: '-1px',
                             opacity: 1
                         }, 500);
+						//$('.one').css('background','#F2b632');
+						//$('.two').css('background', '#F2b632');
+						//$('.three').css('background','#F2b632');
 					}
                 },
                 afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex)
