@@ -294,13 +294,17 @@ svg
     top: 5%;
     left: 115%;
     z-index: 2;
-    width: 30%;
+    width: 33%;
 }
 
-#section1 #diag1 #wDesign:hover #designSVG,
 #section1 #diag2 #gDesign:hover #cameraSVG
 {
     width: 32%;
+}
+
+#section1 #diag1 #wDesign:hover #designSVG
+{
+    width: 36%;
 }
 
 #section1 #diag1 a:hover,
@@ -525,7 +529,7 @@ svg
 
 #section1 #diag1
 {
-	background: rgba(242,182,50,1);
+	background: rgba(242,182,50,0.95);
 	-webkit-transform: skewY(-10deg);
 	-moz-transform: skewY(-10deg);
 	-ms-transform: skewY(-10deg);
@@ -534,13 +538,6 @@ svg
 	border-bottom: thick solid white;
 	margin-top: -10%;
 	z-index: 2;
-	opacity: 0.95;
-	
-}
-
-#section1 #diag1:hover
-{
-	opacity: 1;
 }
 
 #section1 #diag2
@@ -633,7 +630,7 @@ svg
 
 #section2
 {
-    background: url('../img/desktop.jpg');
+    background: url('../img/desktopB.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -655,7 +652,6 @@ svg
 
 #section2 #mobileDesign
 {
-    background: #293241;
     width: 100%;
     height: 50%;
     margin-top: -200px;
@@ -676,13 +672,9 @@ svg
 {
     font-size: 3em;
     font-weight: 700;
-    color: #98C1D9;
+    color: #EEEEEE;
     text-transform: uppercase;
-}
-
-#section2 #mobileCode h2
-{
-    color: #293241;
+    padding-bottom: 3%;
 }
 
 #section2 #mobileCode h4, #section2 #mobileDesign h4
@@ -690,11 +682,6 @@ svg
     color: #E0FBFC;
     text-transform: none;
     font-size: 1.5em;
-}
-
-#section2 #mobileCode h4
-{
-    color: #3D5A80;
 }
 
 #section2 #topSkills
@@ -757,7 +744,7 @@ svg
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,.97);
 	transition: all .5s;
 	overflow: hidden;
 }
@@ -836,7 +823,7 @@ svg
  .bar
 {
 	width: 60%;
-	background: #BDBDBD;
+	background: #757575;
 	height: 4px;
 	transition: all 1s;
     margin: auto;
@@ -854,14 +841,14 @@ svg
 {
     height: 100%;
     width: 1%;
-    background: #FB2D2D;
+    background: #F2B632;
 	transition: all 2.5s;
 }
 
 #section3
 {
-	//background: transparent url("../img/meJump_bmin.jpg") repeat scroll center top / cover;
-    background: #252839;
+	background: transparent url("../img/escalatorT.jpg") repeat scroll center top / cover;
+    background-attachment: fixed;
 }
 
 #section3 img
@@ -873,12 +860,12 @@ svg
 
 #section3 .leftside
 {
-	background: #677077;
 	float: left;
 	width: 50%;
     height: 100%;
 	box-sizing: border-box;
 	display: table;
+    background: rgba(33,33,33,0.8);
 }
 
 #section3 .rightside
@@ -939,7 +926,7 @@ svg
 	font-size: 18px;
 	border-radius: 0;
 	line-height: 22px;
-	background-color: rgba(255,255,255,0.1);
+	background-color: rgba(33,33,33,0.7);
     border: 2px solid #F2B632;
 	padding: 13px 13px 13px 54px;
 	margin-bottom: 10px;
@@ -951,7 +938,7 @@ svg
 }
 
 .feedback-input:focus{
-	background: rgba(41,50,65,0.7);
+	background: rgba(33,33,33,0.8);
 	box-shadow: none;
 	color: #F2B632;
 	border: 2px solid #E0FBFC;
@@ -1003,7 +990,7 @@ textarea {
 
 input:hover, textarea:hover,
 input:focus, textarea:focus {
-	background-color: rgba(41,50,65,0.7);
+	background-color: rgba(33,33,33,0.8);
 }
 
 #button-blue{
@@ -1013,7 +1000,7 @@ input:focus, textarea:focus {
 	width: 100%;
 	border: 2px solid #F2B632;
 	cursor:pointer;
-	background-color: rgba(41,50,65,0.5);
+	background-color: rgba(33,33,33,0.5);
 	color: #F2B632;
 	font-size:24px;
 	padding-top:10px;
@@ -1025,7 +1012,7 @@ input:focus, textarea:focus {
 
 #button-blue:hover{
 	background-color: rgba(0,0,0,0);
-	color: #293241;
+	color: #212121;
 	border: 2px solid #E0FBFC;
 }
 	
@@ -1110,7 +1097,7 @@ input:focus, textarea:focus {
 {
 	font-size: 2em;
 	text-transform: none;
-	color: #252839;
+	color: #F2B639;
 	font-weight: 900;
 	display: block;
 }
@@ -1134,7 +1121,7 @@ input:focus, textarea:focus {
 
 #section3 i
 {
-	color: #B5B5B7;
+	color: #F2B639;
 }
 
 #section3 h5
@@ -1150,7 +1137,7 @@ input:focus, textarea:focus {
 
 #section3 a
 {
-	color: #252839;
+	color: #F2B639;
 	text-transform: none;
 }
 
@@ -1279,6 +1266,11 @@ input:focus, textarea:focus {
         transition: all 1s;
     }
     
+    #section3 
+    {
+        
+    }
+    
     #section3 .rightside
     {
         width: 100%;
@@ -1287,6 +1279,7 @@ input:focus, textarea:focus {
         padding-bottom: 100px;
         height: auto;
         opacity: 1;
+        background: rgba(0,0,0,0.8);
     }
     
     #section3 #info
@@ -1305,19 +1298,18 @@ input:focus, textarea:focus {
         padding-top: 50px;
         padding-bottom: 50px;
         float: none;
+        //background: rgba(66,66,66,0.9);
     }
     
     #section2 #mobileDesign, #section2 #mobileCode
     {
-        padding-top: 70px;
-        padding-bottom: 70px;
         height: auto;
     }
     
     #section2 #mobileDesign
     {
-        margin-top: -60px;
         height: auto;
+        padding-bottom: 10%;
     }
     
     #section3 #me
@@ -1395,10 +1387,12 @@ input:focus, textarea:focus {
     
     #section1
     {
-        background: url('../img/skyCity.jpg');
+        background: url('../img/CityMobile.jpg');
+        background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
-        background-attachment: scroll;
+        //background-size: cover;
+        //background-position: center;
+        //background-attachment: scroll;
     }
     
     #section1 #gDesign, #section1 #wDesign
@@ -1417,8 +1411,8 @@ input:focus, textarea:focus {
     #section1 #gDesign h2 
     {
         font-size: 3em;
-		color: #ffff33;
-		border-bottom: 10px solid #ffff33;
+		color: #F2B632;
+		border-bottom: 10px solid #F2B632;
     }
 	
 	#section1 #over
@@ -1429,8 +1423,16 @@ input:focus, textarea:focus {
 	#section1 #mobileWork
 	{
 		display: block;
-		height: 100%;
+        padding-top: 10%;
+        padding-bottom: 10%;
 	}
+    
+    #section1 .mobWork
+    {
+        width: 150px;
+        display: block;
+        margin: auto;
+    }
 	
 	#section1 #deskWork
 	{
@@ -1440,6 +1442,7 @@ input:focus, textarea:focus {
 	#section1 #mobileWork p
 	{
 		color: #EEEEEE;
+        text-align: center;
 	}
 	
 	#section1 #webdesign
@@ -1448,6 +1451,7 @@ input:focus, textarea:focus {
 		//background-size: cover;
 		//background-position: center;
 		height: 50%;
+        padding-bottom: 10%;
 	}
 	
 	#section1 #graphics

@@ -95,9 +95,13 @@ $('#fullpage').fullpage({
 					
                     if(index == 2)
 					{	
-                        $('.one').css('background','#212121');
-						$('.two').css('background','#212121');
-						$('.three').css('background','#212121');
+                    
+                        if ( $(window).width() > 850){
+                            $('.one').css('background','#212121');
+                            $('.two').css('background','#212121');
+                            $('.three').css('background','#212121');
+                        }
+                        
 						//$("#section1 a").hover(
 						  //function(){
 							//if ( $(window).width() > 850) {
