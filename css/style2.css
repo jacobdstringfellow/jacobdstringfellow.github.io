@@ -658,6 +658,19 @@ svg
     padding-top: 200px;
 }
 
+#section2 #mobileWork
+{
+    background: url('../img/CityMobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section2 #mobileWork p
+{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 #section2 #mobileCode
 {
     
@@ -670,7 +683,7 @@ svg
 
 #section2 #mobileCode h2, #section2 #mobileDesign h2
 {
-    font-size: 3em;
+    font-size: 3.3em;
     font-weight: 700;
     color: #EEEEEE;
     text-transform: uppercase;
@@ -679,9 +692,9 @@ svg
 
 #section2 #mobileCode h4, #section2 #mobileDesign h4
 {
-    color: #E0FBFC;
+    color: #E0E0E0;
     text-transform: none;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 #section2 #topSkills
@@ -1104,12 +1117,12 @@ input:focus, textarea:focus {
 
 #section3 h4
 {
-	font-size: 1.4em;
+	font-size: 1.5em;
 }
 
 #section3 p
 {
-	font-size: 1.3em;
+	font-size: 1.5em;
 	color: #EEEEEE;
 	text-transform: none;
 	font-weight: 300;
@@ -1126,7 +1139,7 @@ input:focus, textarea:focus {
 
 #section3 h5
 {
-	font-size: 1.3em;
+	font-size: 1.5em;
 	font-weight: 500;
 	color: #98C1D9;
     padding-left: 35px;
@@ -1199,7 +1212,13 @@ input:focus, textarea:focus {
 {
     #section1
     {
-        border-bottom: 0px solid white;
+        border-top: thick solid #F2B632;
+        border-bottom: thick solid #E0E0E0;
+    }
+    
+    #section2
+    {
+        border-bottom: thick solid #E0E0E0;
     }
     
     #section1 #wDesign
@@ -1430,9 +1449,12 @@ input:focus, textarea:focus {
     #section1 #wDesign h2, 
     #section1 #gDesign h2 
     {
-        font-size: 3em;
-		color: #F2B632;
-		border-bottom: 10px solid #F2B632;
+        font-size: 3.3em;
+        font-weight: 700;
+        color: #EEEEEE;
+        text-transform: uppercase;
+        padding-bottom: 3%;
+        border-bottom: none;
     }
 	
 	#section1 #over
@@ -1463,6 +1485,9 @@ input:focus, textarea:focus {
 	{
 		color: #EEEEEE;
         text-align: center;
+        font-size: 2em;
+        padding-left: 5%;
+        padding-right: 5%;
 	}
 	
 	#section1 #webdesign
@@ -1480,6 +1505,7 @@ input:focus, textarea:focus {
 		//background-size: cover;
 		//background-position: center;
 		height: 50%;
+        padding-bottom: 10%;
 	}
 	
 	#section1 #gDesign, #section1 #wDesign
