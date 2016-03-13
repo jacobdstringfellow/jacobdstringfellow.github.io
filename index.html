@@ -435,11 +435,11 @@
 
     .l-left
     {
-        height: 60px;
+        height: 50px;
         position: absolute;
         left: 20px;
         top: 20px;
-        width: 60px;  
+        width: 50px;  
     }
     
     #lite
@@ -490,7 +490,7 @@
       -o-transition-duration: 0.5s;
       -webkit-transition-duration: 0.5s;
       transition-duration: 0.5s;
-      font-size: 2em;
+      font-size: 2.5em;
       line-height: 1.5;
       width: 100%;
       display: block;
@@ -551,40 +551,7 @@
       padding-left: 0;
     }
 
-    @media screen and (max-width: 600px) {
-        .menu-toggle
-        {
-            top: 15px;
-            right: 20px;
-            width: 30px;
-        }
-
-        .one, .two, .three
-        {
-            height: 3px;
-        }
-
-        .menu-toggle.on .one {
-          -moz-transform: rotate(45deg) translate(5px, 5px);
-          -ms-transform: rotate(45deg) translate(5px, 5px);
-          -webkit-transform: rotate(45deg) translate(5px, 5px);
-          transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .menu-toggle.on .three {
-          -moz-transform: rotate(-45deg) translate(7px, -8.5px);
-          -ms-transform: rotate(-45deg) translate(7px, -8.5px);
-          -webkit-transform: rotate(-45deg) translate(7px, -8.5px);
-          transform: rotate(-45deg) translate(7px, -8.5px);
-        }
-
-        #logo
-           {
-            width: 50px;
-            padding-top: 10px;
-            padding-left: 10px;
-        }
-    }
+   
 
     @media screen and (max-width: 400px) {
 
@@ -594,9 +561,12 @@
             right: 10px;
         }
 
-        #logo
+        .l-left
         {
-            width: 40px;
+            width: 45px;
+            height: 45px;
+            top: 10px;
+            left: 10px;
         }
 
     }
