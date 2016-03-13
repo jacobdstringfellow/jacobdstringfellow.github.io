@@ -1147,14 +1147,14 @@ input:focus, textarea:focus {
 	padding-top: 10px;
 	font-weight: 700;
     padding-left: 0px;
-    color: #98C1D9;
+    color: #EEEEEE;
     display: inline-block;
     padding-right: 0px;
 }
 
 #section3 footer h6
 {
-    color: #98C1D9;
+    color: #F2B632;
     display: inline-block;
     padding-right: 60px;
     font-size: 1em;

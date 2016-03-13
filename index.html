@@ -151,7 +151,7 @@
         margin: -150px 0 0 -150px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #fb2d2d;
+        border-top-color: #F2B632;
 
         -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
         animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
@@ -183,7 +183,7 @@
         bottom: 15px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #fb2d2d;
+        border-top-color: #F2B632;
 
         -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
           animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
@@ -433,18 +433,43 @@
       transition-duration: 0.3s;
     }
 
+    .l-left
+    {
+        height: 60px;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 60px;  
+    }
+    
+    #lite
+    {
+        background: transparent url("img/logo-lite-shell.png");
+        background-size: cover;  
+    }
+        
+    #yellow
+    {
+        background: transparent url("img/logo-shell.png");
+        background-size: cover;  
+    }
+        
+    #dark
+    {
+        background: transparent url("img/logo-dark-shell.png");
+        background-size: cover;  
+    }
     nav {
 
         box-sizing: border-box;
         position: fixed;
         width: 100%;
         height: 100%;
-        background: rgba(66, 66, 66, 0.9);
+        background: rgba(33,33,33, 0.95);
         //background: url('../img/planeView_dark.jpg');
         //background-size: cover;
         //background-attachment: fixed;
         display: none;
-        margin-top: -65px;
     }
 
     nav ul {
@@ -487,6 +512,7 @@
         top: 50%;
         position: relative;
         font-weight: 900;
+        color: #F2B632;
     }
 
     nav li:nth-child(odd) a {
@@ -554,7 +580,7 @@
 
         #logo
            {
-            width: 45px;
+            width: 50px;
             padding-top: 10px;
             padding-left: 10px;
         }
@@ -648,11 +674,11 @@
 
     #logo
     {
-        width: 45px;
-        padding-top: 15px;
+        width: 60px;
+        padding-top: 20px;
         border: none;
         text-align: left;
-        padding-left: 15px;
+        padding-left: 20px;
     }
 
     #logo:visited
@@ -1459,7 +1485,9 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
 <header>
 
 <div id="topNav" class="menu-section header-top">
-  <a class="l-left"><img id="logo" alt="JDS Logo" src="img/meInvert_Lite.png"/></a>
+  <a id="yellow" class="l-left"></a>
+  <a id="dark" class="l-left"></a>
+  <a id="lite" class="l-left"></a>
   <div class="menu-toggle">
     <div class="one"></div>
     <div class="two"></div>
@@ -1487,7 +1515,7 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
 <div id="fullpage">
 	<div class="section" id="section0">
         <div id="loader-wrapper">
-			<div id="loader"></div><img id="logoLoad" alt="JDS Logo" title="JDS Logo" src="img/meOutline.png"/>
+			<div id="loader"></div><img id="logoLoad" alt="JDS Logo" title="JDS Logo" src="img/logo-dark-outlineY.png"/>
 			<div class="loader-section section-left"></div>
             <div class="loader-section section-right"></div>
 		</div>
