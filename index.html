@@ -23,10 +23,10 @@
     (DONE) STYLE FOOTER
     (HOLD OFF) NAV AGAIN
     (DONE)COLOR SCHEME
-	LOGO REDESIGN
+	(GOOD FOR NOW) LOGO REDESIGN
     NAV AGAIN
     OPTIMIZE IMAGES
-    PRELOADER
+    (GOOD FOR NOW) PRELOADER
 	MINIFY JS AND CSS
 	LINKEDiN
 	
@@ -465,10 +465,10 @@
         position: fixed;
         width: 100%;
         height: 100%;
-        background: rgba(33,33,33, 0.95);
-        //background: url('../img/planeView_dark.jpg');
-        //background-size: cover;
-        //background-attachment: fixed;
+        //background: rgba(33,33,33, 0.95);
+        background: url('img/desktop-min.jpg');
+        background-size: cover;
+        background-attachment: fixed;
         display: none;
     }
 
@@ -1560,10 +1560,10 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
            <!-- <object id= "cameraSVG" type="image/svg+xml" data="img/camera.svg">Your browser does not support SVG</object>
             <object id= "designSVG" type="image/svg+xml" data="img/camera.svg">Your browser does not support SVG</object>-->
 			<div id="diag1">
-			 <a href="img/work/ka-main.png" id="wDesign" data-rel="lightcasedesign:design"><h5>VIEW MY</h5><img id = "designSVG" src="img/responsive.png"/><h2>&lt;webdesign></h2><p>My portfolio is best displayed as this site<br>itself, however click for screenshots<br>of my earlier work.</p></a><br><br>
+                <a href="img/work/ka-main.png" id="wDesign" data-rel="lightcasedesign:design"><h5>VIEW MY</h5><i id="desktop" class="fa fa-desktop"></i><h2>&lt;webdesign></h2><p>My portfolio is best displayed as this site<br>itself, however click for screenshots<br>of my earlier work.</p></a><br><br>
             </div>
             <div id="diag2">
-			 <a href="img/work/TSMTLIFT.jpg" id="gDesign" data-rel="lightcasework:work"><h5>VIEW MY</h5><h2>*eventgraphics*</h2><img id = "cameraSVG" src="img/graphic.png"/><p>I've been creating event graphics for 5+ years<br>using only Microsoft Paint and just maybe<br>some Adobe Photoshop.</p></a>
+                <a href="img/work/TSMTLIFT.jpg" id="gDesign" data-rel="lightcasework:work"><h5>VIEW MY</h5><h2>*eventgraphics*</h2><i id="picture" class="fa fa-picture-o"></i><p>I've been creating event graphics for 5+ years<br>using only Microsoft Paint and just maybe<br>some Adobe Photoshop.</p></a>
             </div>
 		</div>	
 		<div id="mywork"> 
@@ -1593,10 +1593,12 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
         </div>
         <div id="mobileWork">
 			<div id="webdesign">
-				<a href="img/work/ka-main.png" id="wDesign" data-rel="lightcasedesign:design"><img class="mobWork" src="img/responsive-mob.png"/><h2>&lt;webwork></h2><p>My web design portfolio is growing from the ground up every day.</p></a>
+				<a href="img/work/ka-main.png" id="wDesign" data-rel="lightcasedesign:design"><i class="fa fa-picture-o"></i>
+<h2>&lt;webwork></h2><p>My web design portfolio is growing from the ground up every day.</p></a>
 			</div>
 			<div id="graphics">
-				<a href="img/work/LiftBLUESQUAD.jpg"  id="gDesign" data-rel="lightcasework:work"><img class="mobWork" src="img/graphic.png"/><h2>*graphics*</h2><p>I've been creating event graphics for 5+ years using only Microsoft Paint. JK</p></a>
+				<a href="img/work/LiftBLUESQUAD.jpg"  id="gDesign" data-rel="lightcasework:work"><i class="fa fa-desktop"></i>
+<h2>*graphics*</h2><p>I've been creating event graphics for 5+ years using only Microsoft Paint. JK</p></a>
 			</div>
 		</div>
 	</div>
@@ -1607,7 +1609,8 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
            <!-------------------------------------------------->
            <div id="mobileDesign">
                <div>
-                <img src="img/crown.png" alt="Crown Design" title="Crown Icon">
+                <!--<img src="img/crown.png" alt="Crown Design" title="Crown Icon">-->
+                <i class="fa fa-diamond"></i>
                 <h2>Design</h2>
                 <h4>HTML & CSS</h4>
                 <div class="bar"><div class="html"></div></div>
@@ -1620,7 +1623,7 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
                 </div>
             </div>
             <div id="mobileCode">
-                <img src="img/codeIcon.png" alt="Code Development" title="Code Icon">
+                <i class="fa fa-code"></i>
                 <h2>Development</h2>
                 <h4>PHP</h4>
                 <div class="bar"><div class="php"></div></div>
@@ -1637,7 +1640,6 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
            <div id="topSkills">
 			<div id="heading">
 				<h1>SKILLS</h1>
-				<p>jQuery | WordPress</p>
             </div>
            </div>
             <div id="bottomSkills" class="popup">
@@ -1645,7 +1647,7 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
                     <i id="infoL" class="fa fa-info-circle"></i>
 					<div id="leftInfo">
 						<div id="leftContainer">
-							<img src="img/codeIconY.png" alt="Code Development" title="Code Icon">
+							<i class="fa fa-code"></i>
                             <h4>PHP</h4>
 							<div class="bar"><div class="php"></div></div>
                             <h4>MySQL</h4>
@@ -1662,7 +1664,7 @@ else if (/^\S+@[a-z0-9_.-]+\.[a-z]{2,6}$/i.test(document.hgmailer.email.value) =
 					<div id="rightInfo">
 						<div id="rightContainer">
 							<div>
-							<img src="img/crownY.png" alt="Crown Design" title="Crown Icon">
+							<i class="fa fa-diamond"></i>
                             <h4>HTML & CSS</h4>
 							<div class="bar"><div class="html"></div></div>
                             <h4>JavaScript</h4>

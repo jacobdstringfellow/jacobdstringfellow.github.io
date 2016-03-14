@@ -276,35 +276,34 @@ svg
 	display: none;
 }
 
-#section1 #cameraSVG, #section1 #designSVG
+#section1 i
 {
     position: absolute;
     transition: all .5s;
+    font-size: 130px;
 }
 
-#section1 #cameraSVG
+#section1 #picture
 {
     right: 110%;
     bottom: 30%;
     width: 30%;
+    color: #F2B632;
 }
 
-#section1 #designSVG
+#section1 #desktop
 {
     top: 5%;
     left: 115%;
     z-index: 2;
     width: 33%;
+    color: #191919;
 }
 
-#section1 #diag2 #gDesign:hover #cameraSVG
+#section1 #diag2 #gDesign:hover i,
+#section1 #wDesign:hover i
 {
-    width: 32%;
-}
-
-#section1 #diag1 #wDesign:hover #designSVG
-{
-    width: 36%;
+    font-size: 140px;
 }
 
 #section1 #diag1 a:hover,
@@ -820,11 +819,20 @@ svg
 	display: inline-block;
 }
 
-#rightContainer img, #leftContainer img
+#leftContainer i
 {
-	width: 100px;
+	font-size: 100px;
 	margin: 0;
 	text-align: center;
+    color: #F2B632;
+    padding-bottom: 20px;
+}
+
+#rightContainer i
+{
+    font-size: 80px;
+    color: #F2B632;
+    padding-bottom: 20px;
 }
 
 #rightContainer h4, #leftContainer h4
@@ -860,7 +868,7 @@ svg
 
 #section3
 {
-	background: transparent url("../img/escalatorT.jpg") repeat scroll center top / cover;
+	background: transparent url("../img/escalatorTY.jpg") repeat scroll center top / cover;
     background-attachment: fixed;
 }
 
@@ -1230,6 +1238,14 @@ input:focus, textarea:focus {
         transform: skewY(0deg);
     }
     
+    #section1 #mobileWork i
+    {
+        display: block;
+        font-size: 130px;
+        color: #FFFFFF;
+        position: initial;
+    }
+    
     #section2
     {
         padding-top: 10%;
@@ -1352,6 +1368,18 @@ input:focus, textarea:focus {
         padding-bottom: 10%;
     }
     
+    #section2 #mobileDesign i
+    {
+        font-size: 120px;
+        color: #F2B632;
+    }
+    
+    #section2 #mobileCode i
+    {
+        font-size: 130px;
+        color: #F2B632;
+    }
+    
     #section3 #me
     {
         display: inline-block;
@@ -1452,10 +1480,9 @@ input:focus, textarea:focus {
     {
         font-size: 3.3em;
         font-weight: 700;
-        color: #EEEEEE;
+        color: #F2B632;
         text-transform: uppercase;
-        padding-bottom: 3%;
-        border-bottom: none;
+        border-bottom: thick solid #F2B632;
     }
 	
 	#section1 #over
