@@ -1337,6 +1337,7 @@ input:focus, textarea:focus {
         padding-top: 10%;
         padding-bottom: 10%;
         float: none;
+        border-bottom: thick solid #E0E0E0;
         //background: rgba(66,66,66,0.9);
     }
     
