@@ -336,6 +336,7 @@ else {
 					$(this).dequeue();});
 					$('#section0').find('img').delay(1000).fadeTo(1000, 0); 
                     $('#section1 a').css("display","inline-block");
+                    //$('nav').css('background','rgba("66,66,66,0.95")');
                     
                     if(index !== 1){
                          $('#overlay').css('display', 'none');
